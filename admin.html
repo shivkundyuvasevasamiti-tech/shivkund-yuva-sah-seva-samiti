@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shivkund Yuva Sah Seva Samiti | Admin Portal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <!-- ADMIN LOGIN -->
+    <section class="login-page" id="loginPage">
+        <div class="login-card">
+
+            <div class="brand-mark">S</div>
+
+            <p class="login-eyebrow">SHIVKUND YUVA SAH SEVA SAMITI</p>
+
+            <h1>Shivkund</h1>
+
+            <p class="portal-title">Examination Administration Portal</p>
+
+            <div class="login-icon" aria-hidden="true">🔐</div>
+
+            <h2>Admin Login</h2>
+
+            <p class="login-description">
+                Sign in securely to manage registrations and examination payments.
+            </p>
+
+            <form id="loginForm">
+                <label for="email">Admin Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter admin email"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit" id="loginButton">
+                    Login to Dashboard
+                </button>
+
+                <div id="loginMessage" role="status" aria-live="polite"></div>
+            </form>
+
+            <p class="login-security-note">
+                Authorised administration only
+            </p>
+        </div>
+    </section>
+
+<a href="index.html" class="back-home-btn" id="backHomeBtn">
+    <span aria-hidden="true">←</span>
+    Back to Home
+</a>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const backHomeBtn = document.getElementById("backHomeBtn");
+    const dashboardPage = document.getElementById("dashboardPage");
+
+    if (!backHomeBtn || !dashboardPage) return;
+
+    function updateBackHomeButton() {
+        const dashboardVisible =
+            window.getComputedStyle(dashboardPage).display !== "none";
+
+        backHomeBtn.style.display =
+            dashboardVisible ? "none" : "inline-flex";
+    }
+
+    updateBackHomeButton();
+
+    const observer = new MutationObserver(updateBackHomeButton);
+
+    observer.observe(dashboardPage, {
+        attributes: true,
+        attributeFilter: ["style", "class"]
+    });
+});
+</script>
+
+    <!-- ADMIN DASHBOARD -->
+    <section
+        class="dashboard-page"
+        id="dashboardPage"
+        style="display: none;"
+    >
+
+        <!-- SINGLE DASHBOARD HEADER -->
+        <header class="dashboard-header">
+
+            <div class="dashboard-brand">
+                <img
+                    src="images/logo.jpg"
+                    alt="Shivkund Yuva Sah Seva Samiti logo"
+                >
+
+                <div class="dashboard-brand-copy">
+                    <h1>Shivkund Yuva Sah Seva Samiti</h1>
+                    <p>ADMINISTRATION • EXAMINATION • MANAGEMENT</p>
+                </div>
+            </div>
+
+            <button id="logoutButton" type="button">
+                Logout
+            </button>
+
+        </header>
+
+
+        <main class="dashboard-content">
+
+            <!-- WELCOME BANNER -->
+            <section class="welcome-section">
+                <p class="dashboard-label">ADMINISTRATION CONSOLE</p>
+
+                <h1>Examination Dashboard</h1>
+
+                <p>
+                    Monitor student registrations, review payment records,
+                    assign roll numbers through the existing verification
+                    workflow, and prepare the verified students list.
+                </p>
+
+                <div class="dashboard-established">
+                    <span class="tricolour-dot" aria-hidden="true"></span>
+                    Established 2004
+                </div>
+            </section>
+
+
+            <!-- DASHBOARD STATISTICS -->
+            <section class="dashboard-cards" aria-label="Dashboard statistics">
+
+                <article class="dashboard-card">
+                    <div class="card-icon pending-icon" aria-hidden="true">
+                        ₹
+                    </div>
+
+                    <div>
+                        <h3>Pending Payments</h3>
+                        <p id="pendingCount">0</p>
+                        <span class="stat-caption">Awaiting review</span>
+                    </div>
+                </article>
+
+                <article class="dashboard-card">
+                    <div class="card-icon verified-icon" aria-hidden="true">
+                        ✓
+                    </div>
+
+                    <div>
+                        <h3>Verified Payments</h3>
+                        <p id="verifiedCount">0</p>
+                        <span class="stat-caption">Marked successful</span>
+                    </div>
+                </article>
+
+                <article class="dashboard-card">
+                    <div class="card-icon registration-icon" aria-hidden="true">
+                        <span>♙</span>
+                    </div>
+
+                    <div>
+                        <h3>Registrations</h3>
+                        <p id="registrationCount">0</p>
+                        <span class="stat-caption">Student records</span>
+                    </div>
+                </article>
+
+            </section>
+
+
+            <!-- PAYMENT VERIFICATION -->
+            <section class="dashboard-panel" id="paymentPanel">
+
+                <div class="panel-header">
+                    <div>
+                        <p class="panel-kicker">PAYMENT OPERATIONS</p>
+                        <h2>Payment Verification</h2>
+                        <p>
+                            Review transaction records and use the existing
+                            verification action when payment has been confirmed.
+                        </p>
+                    </div>
+
+                    <span class="panel-heading-mark" aria-hidden="true">₹</span>
+                </div>
+
+                <div id="paymentArea">
+                    <p>Loading payment records...</p>
+                </div>
+
+            </section>
+
+
+            <!-- REGISTERED STUDENTS -->
+            <section class="dashboard-panel" id="studentsPanel">
+
+                <div class="panel-header">
+                    <div>
+                        <p class="panel-kicker">STUDENT RECORDS</p>
+                        <h2>Registered Students</h2>
+                        <p>
+                            Search student records and organise the list by
+                            class, name, or roll number.
+                        </p>
+                    </div>
+
+                    <span class="panel-heading-mark" aria-hidden="true">01</span>
+                </div>
+
+                <div id="studentControls">
+ <label for="studentSearch">search student using Name, Roll no , Father's name </label>
+                    <input
+                        type="search"
+                        id="studentSearch"
+                        placeholder="Search name, roll no., mobile or school..."
+                        aria-label="Search registered students"
+                    >
+
+                   
+                </div>
+
+
+    <div class="student-control">
+        <label for="studentSort">Sort Students</label>
+        <select id="studentSort">
+            <option value="roll-asc">Roll Number: Low to High</option>
+            <option value="roll-desc">Roll Number: High to Low</option>
+            <option value="name-asc">Name: A to Z</option>
+            <option value="name-desc">Name: Z to A</option>
+            <option value="class-asc">Class: Low to High</option>
+            <option value="class-desc">Class: High to Low</option>
+        </select>
+    </div>
+
+    <button type="button" id="resetStudentFilters">
+        Reset Filters
+    </button>
+
+</div>
+
+                <div id="studentArea" aria-live="polite">
+                    <p>Loading student records...</p>
+                </div>
+
+            </section>
+
+
+            <!-- VERIFIED STUDENTS / CENTRE GATE LIST -->
+            <section class="dashboard-panel verified-students-panel">
+
+                <button
+                    type="button"
+                    id="verifiedStudentsToggle"
+                    class="verified-list-toggle"
+                    aria-expanded="false"
+                    aria-controls="verifiedStudentsDropdown"
+                >
+                    <span class="verified-toggle-copy">
+                        <span class="verified-toggle-icon" aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            <strong>Verified Students</strong>
+                            <small>Examination centre gate list</small>
+                        </span>
+                    </span>
+
+                    <span
+                        id="verifiedStudentsArrow"
+                        class="verified-list-arrow"
+                        aria-hidden="true"
+                    >▼</span>
+                </button>
+
+
+                <div
+                    id="verifiedStudentsDropdown"
+                    class="verified-students-dropdown"
+                    aria-label="Verified students list"
+                >
+
+                    <div class="verified-list-header">
+                        <div>
+                            <p class="panel-kicker">EXAMINATION DAY</p>
+                            <h2>Verified Students — Centre Gate List</h2>
+                            <p>
+                                Students with successful payment records and
+                                an assigned roll number.
+                            </p>
+                        </div>
+
+                        <button
+                            type="button"
+                            id="printVerifiedStudents"
+                            class="print-list-button"
+                        >
+                            Print Verified List
+                        </button>
+                    </div>
+
+                    <div id="verifiedStudentsArea" aria-live="polite">
+                        <p>Loading verified students...</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <footer class="dashboard-footer">
+                <span>Shivkund Yuva Sah Seva Samiti</span>
+                <span>Education • Sports • Culture • Youth Development</span>
+            </footer>
+
+        </main>
+    </section>
+
+
+    <!-- SUPABASE CLIENT -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+        const SUPABASE_URL =
+            "https://ldvirwcwndeuwljeokom.supabase.co";
+
+        const SUPABASE_ANON_KEY =
+            "sb_publishable_l-XkBlX97sLoAaFaAO67dQ_6cYgzqpW";
+
+        const supabaseClient = window.supabase.createClient(
+            SUPABASE_URL,
+            SUPABASE_ANON_KEY
+        );
+    </script>
+
+    <!-- EXISTING ADMIN FUNCTIONALITY -->
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

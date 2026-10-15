@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Payment | Shivkund Examination 2027</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/payment.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="payment-header">
+
+        <div class="header-inner">
+
+            <div class="brand">
+
+                <img
+                    src="images/logo.jpg"
+                    alt="Shivkund Yuva Sah Seva Samiti"
+                >
+
+                <div class="brand-text">
+                    <strong>Shivkund</strong>
+                    <span>Yuva Sah Seva Samiti</span>
+                </div>
+
+            </div>
+
+            <div class="secure-badge">
+                🔒 Secure Payment
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="payment-page">
+
+        <div class="payment-container">
+
+
+            <!-- PAGE TITLE -->
+
+            <div class="payment-intro">
+
+                <div class="eyebrow">
+                    Examination 2027
+                </div>
+
+                <h1>
+                    Complete your payment
+                </h1>
+
+                <p class="intro-text">
+                    Pay the examination fee securely using UPI.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 STUDENT SUMMARY
+            ================================================== -->
+
+            <section class="student-card">
+
+                <div class="student-grid">
+
+                    <div class="student-detail">
+
+                        <small>
+                            Student
+                        </small>
+
+                        <strong id="studentName">
+                            Registered Student
+                        </strong>
+
+                    </div>
+
+
+                    <div class="student-detail">
+
+                        <small>
+                            Class
+                        </small>
+
+                        <strong id="studentClass">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="student-detail">
+
+                        <small>
+                            Mobile
+                        </small>
+
+                        <strong id="studentMobile">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MAIN CHECKOUT
+            ================================================== -->
+
+            <section class="payment-card">
+
+
+                <!-- PAYMENT HEADER -->
+
+                <div class="payment-card-header">
+
+                    <div>
+
+                        <h2>
+                            Pay examination fee
+                        </h2>
+
+                        <p>
+                            Scan the QR code or use your UPI app
+                        </p>
+
+                    </div>
+
+
+                    <div class="amount-box">
+
+                        <span>
+                            Amount
+                        </span>
+
+                        <strong id="amountDisplay">
+                            ₹20
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAYMENT BODY -->
+
+                <div class="payment-main">
+
+
+                    <!-- =============================================
+                         LEFT — QR
+                    ============================================== -->
+
+                    <div class="qr-section">
+
+                        <div class="qr-title">
+                            Scan & Pay
+                        </div>
+
+                        <div class="qr-frame">
+
+                            <img
+                                id="paymentQrImage"
+                                src="images/payment-qr.png"
+                                alt="Shivkund UPI Payment QR Code"
+                            >
+
+                        </div>
+
+                        <p class="qr-help">
+                            Open any UPI app and scan this QR code.
+                        </p>
+
+
+                        <!-- UPI ID -->
+
+                        <div class="upi-box">
+
+                            <span>
+                                UPI ID
+                            </span>
+
+                            <div class="upi-row">
+
+                                <strong id="paymentUpiId">
+                                    princeasp504@okicici
+                                </strong>
+
+                                <button
+                                    type="button"
+                                    id="copyUpiButton"
+                                    class="copy-button"
+                                >
+                                    Copy
+                                </button>
+
+                            </div>
+
+                            <div id="copyMessage"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =============================================
+                         RIGHT — PAYMENT DETAILS
+                    ============================================== -->
+
+                    <div class="payment-details">
+
+                        <div class="payment-details-title">
+                            Payment details
+                        </div>
+
+
+                        <!-- UPI APPS -->
+
+                        <div class="app-options">
+
+                            <span>
+                                Pay using
+                            </span>
+
+                            <div class="app-list">
+
+                                <div class="app-option">
+                                    Google Pay
+                                </div>
+
+                                <div class="app-option">
+                                    PhonePe
+                                </div>
+
+                                <div class="app-option">
+                                    Paytm
+                                </div>
+
+                                <div class="app-option">
+                                    BHIM
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PAYMENT METHOD -->
+
+                        <div class="form-group">
+
+                            <label for="paymentMethod">
+                                Payment method
+                            </label>
+
+                            <select id="paymentMethod">
+
+                                <option value="">
+                                    Select payment method
+                                </option>
+
+                                <option value="Google Pay">
+                                    Google Pay
+                                </option>
+
+                                <option value="PhonePe">
+                                    PhonePe
+                                </option>
+
+                                <option value="Paytm">
+                                    Paytm
+                                </option>
+
+                                <option value="BHIM">
+                                    BHIM
+                                </option>
+
+                                <option value="Other UPI">
+                                    Other UPI app
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- UTR -->
+
+                        <div class="form-group">
+
+                            <label for="paymentReference">
+                                UTR / Transaction reference
+                            </label>
+
+                            <input
+                                type="text"
+                                id="paymentReference"
+                                placeholder="Enter your UTR number"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+                        <!-- AMOUNT HIDDEN FOR JS -->
+
+                        <div
+                            id="paymentAmount"
+                            style="display:none;"
+                        >
+                            ₹20
+                        </div>
+
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            type="button"
+                            id="submitPaymentButton"
+                            class="submit-payment-button"
+                        >
+
+                            <span class="button-text">
+                                Submit Payment
+                            </span>
+
+                        </button>
+
+
+                        <!-- MESSAGE -->
+
+                        <div
+                            id="paymentMessage"
+                            class="payment-message"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 VERIFICATION
+            ================================================== -->
+
+            <div class="submission-card">
+
+                <div class="verification-note">
+
+                    <strong>
+                        Payment verification
+                    </strong>
+
+                    — Your payment will be checked by the
+                    Shivkund examination team. Once verified,
+                    your official <strong>SYSS roll number</strong>
+                    will be generated.
+
+                </div>
+
+            </div>
+
+
+            <div class="payment-help">
+
+                Need help?
+                <strong>
+                    Contact the Shivkund examination team.
+                </strong>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="payment-footer">
+
+        <strong>
+            Shivkund Yuva Sah Seva Samiti
+        </strong>
+
+        &nbsp;•&nbsp;
+
+        Examination 2027
+
+    </footer>
+
+
+    <!-- =====================================================
+         SUPABASE
+    ====================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+
+        const SUPABASE_URL =
+            "https://ldvirwcwndeuwljeokom.supabase.co";
+
+        const SUPABASE_ANON_KEY =
+            "sb_publishable_l-XkBlX97sLoAaFaAO67dQ_6cYgzqpW";
+
+        const paymentConfig = {
+            upiId: "example@upi"
+        };
+
+        const supabaseClient =
+            window.supabase.createClient(
+                SUPABASE_URL,
+                SUPABASE_ANON_KEY
+            );
+
+    </script>
+
+
+    <!-- =====================================================
+         PAYMENT JS
+    ====================================================== -->
+
+    <script src="js/payment.js"></script>
+
+</body>
+</html>

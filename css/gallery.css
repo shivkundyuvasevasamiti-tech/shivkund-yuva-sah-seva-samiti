@@ -1,0 +1,1296 @@
+/* =========================================
+   SHIVKUND YUVA SAH SEVA SAMITI
+   PREMIUM GALLERY
+========================================= */
+
+.gallery-page {
+    min-height: 100vh;
+    background: #f8fafc;
+    font-family: "DM Sans", sans-serif;
+}
+
+.gallery-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 410px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(
+        180deg,
+        #eef7ff 0%,
+        #ffffff 70%,
+        #f8fbff 100%
+    );
+    isolation: isolate;
+}
+
+.hero-glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.hero-glow-one {
+    top: -250px;
+    left: -150px;
+    background: #ff9933;
+}
+
+.hero-glow-two {
+    bottom: -300px;
+    right: -150px;
+    background: #138808;
+}
+
+.gallery-hero-content {
+    position: relative;
+    width: 100%;
+    padding-top: 45px;
+    z-index: 5;
+}
+
+.organisation-name {
+    position: relative;
+    margin: 0 auto;
+    width: 94%;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.3rem, 5vw, 4.7rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: #092d69;
+    text-shadow:
+        0 2px 0 #ffffff,
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-welcome-text {
+    position: relative;
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 45px;
+    font-family: "Kalam", cursive;
+    font-size: clamp(1.25rem, 3vw, 2.1rem);
+    font-weight: 700;
+    color: #092d69;
+    z-index: 10;
+}
+
+.flag-container {
+    position: absolute;
+    left: -10%;
+    top: 105px;
+    width: 120%;
+    height: 220px;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.flag-wave {
+    position: absolute;
+    left: -20%;
+    width: 140%;
+    height: 105px;
+    border-radius: 50%;
+    transform-origin: center;
+    animation: flagTravel 9s linear infinite;
+}
+
+.flag-wave-saffron {
+    top: 0;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 153, 51, 0.35) 15%,
+        rgba(255, 153, 51, 0.9) 35%,
+        rgba(255, 153, 51, 0.55) 55%,
+        rgba(255, 153, 51, 0.9) 75%,
+        transparent 100%
+    );
+    filter: blur(1px);
+}
+
+.flag-wave-white {
+    top: 60px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.9) 15%,
+        #ffffff 35%,
+        rgba(255, 255, 255, 0.95) 60%,
+        #ffffff 80%,
+        transparent 100%
+    );
+    animation-delay: -3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.flag-wave-green {
+    top: 120px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(19, 136, 8, 0.35) 15%,
+        rgba(19, 136, 8, 0.9) 35%,
+        rgba(19, 136, 8, 0.55) 55%,
+        rgba(19, 136, 8, 0.9) 75%,
+        transparent 100%
+    );
+    animation-delay: -6s;
+    filter: blur(1px);
+}
+
+@keyframes flagTravel {
+    0% {
+        transform: translateX(-18%) translateY(0) rotate(-2deg) scaleY(0.9);
+    }
+
+    25% {
+        transform: translateX(-5%) translateY(12px) rotate(1deg) scaleY(1.05);
+    }
+
+    50% {
+        transform: translateX(8%) translateY(-5px) rotate(-1deg) scaleY(0.95);
+    }
+
+    75% {
+        transform: translateX(20%) translateY(10px) rotate(2deg) scaleY(1.08);
+    }
+
+    100% {
+        transform: translateX(38%) translateY(0) rotate(-2deg) scaleY(0.9);
+    }
+}
+
+.chakra {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #1b4f9c;
+    font-size: 48px;
+    opacity: 0.25;
+    animation: chakraSpin 10s linear infinite;
+}
+
+@keyframes chakraSpin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.gallery-tagline {
+    position: relative;
+    margin-top: 85px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: #17345f;
+    z-index: 10;
+}
+
+.gallery-tagline span {
+    margin: 0 12px;
+    color: #138808;
+}
+
+/* =========================================
+   FULL SCREEN TRICOLOUR LIGHT
+   Background only — content unchanged
+========================================= */
+
+.gallery-section {
+    position: relative;
+    isolation: isolate;
+}
+
+.gallery-section::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(
+        115deg,
+        rgba(255, 153, 51, 0.18) 0%,
+        rgba(255, 153, 51, 0.28) 25%,
+        rgba(255, 255, 255, 0.32) 48%,
+        rgba(19, 136, 8, 0.28) 72%,
+        rgba(19, 136, 8, 0.18) 100%
+    );
+
+    background-size: 300% 300%;
+    animation: tricolourFlow 7s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 45px;
+}
+
+.gallery-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #d8dde5;
+    background: #ffffff;
+    color: #16345f;
+    padding: 11px 25px;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.gallery-filter:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-filter.active {
+    color: #ffffff;
+    border-color: transparent;
+    background: linear-gradient(
+        135deg,
+        #138808,
+        #087f3b
+    );
+    box-shadow: 0 8px 20px rgba(19, 136, 8, 0.2);
+}
+
+.gallery-year-block {
+    margin-bottom: 45px;
+    animation: yearAppear 0.7s ease both;
+}
+
+@keyframes yearAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.year-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.year-heading h2 {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #123a78;
+}
+
+.year-decoration {
+    width: 40px;
+    height: 3px;
+    background: #ff9933;
+    border-radius: 20px;
+}
+
+.year-decoration.green {
+    background: #138808;
+}
+
+.year-subtitle {
+    margin: 2px 0 15px;
+    font-size: 14px;
+    color: #17345f;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.14);
+}
+
+.gallery-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #e9eef4;
+}
+
+.gallery-media img,
+.gallery-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-media img,
+.gallery-card:hover .gallery-media video {
+    transform: scale(1.07);
+}
+
+.gallery-info {
+    padding: 10px 12px;
+}
+
+.gallery-info h3 {
+    margin: 0 0 3px;
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    color: #172f57;
+}
+
+.gallery-info p {
+    margin: 0;
+    font-size: 10px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gallery-video-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 5px 9px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+.gallery-lightbox.show {
+    display: flex;
+}
+
+.lightbox-content {
+    width: min(1000px, 95vw);
+    text-align: center;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 14px;
+}
+
+.lightbox-content h3 {
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+    margin-top: 18px;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .gallery-hero {
+        min-height: 360px;
+    }
+
+    .organisation-name {
+        font-size: 2.15rem;
+    }
+
+    .gallery-welcome-text {
+        font-size: 1.15rem;
+        padding: 8px 20px;
+    }
+
+    .flag-container {
+        top: 105px;
+        height: 190px;
+    }
+
+    .gallery-tagline {
+        margin-top: 75px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .gallery-tagline span {
+        margin: 0 4px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .gallery-section {
+        width: 94%;
+    }
+}
+
+@media (max-width: 430px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-filter {
+        padding: 9px 15px;
+        font-size: 12px;
+    }
+
+    .gallery-welcome-text {
+        font-size: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flag-wave,
+    .chakra,
+    .gallery-year-block {
+        animation: none;
+    }
+}
+/* =========================================
+   GALLERY CONTROLS
+========================================= */
+
+.gallery-controls {
+    width: 100%;
+    margin-top: 55px;
+    margin-bottom: 22px;
+}
+
+.gallery-year-filters,
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.gallery-year-filters {
+    margin-bottom: 18px;
+}
+
+.gallery-year-filter,
+.gallery-filter {
+    border: 1px solid #d7dee8;
+    background: #ffffff;
+    color: #17345f;
+    padding: 11px 24px;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-year-filter:hover,
+.gallery-filter:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09);
+}
+
+.gallery-year-filter.active {
+    color: #ffffff;
+    border-color: transparent;
+    background: linear-gradient(
+        135deg,
+        #ff9933,
+        #e87500
+    );
+    box-shadow: 0 8px 22px rgba(255, 153, 51, 0.25);
+}
+
+.gallery-filter.active {
+    color: #ffffff;
+    border-color: transparent;
+    background: linear-gradient(
+        135deg,
+        #138808,
+        #087f3b
+    );
+    box-shadow: 0 8px 22px rgba(19, 136, 8, 0.22);
+}
+
+/* =========================================
+   BIGGER GALLERY
+========================================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.gallery-card {
+    border-radius: 16px;
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-media {
+    aspect-ratio: 4 / 3;
+}
+
+.gallery-info {
+    padding: 14px 16px 16px;
+}
+
+.gallery-info h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.gallery-info p {
+    font-size: 11px;
+}
+
+/* =========================================
+   REALISTIC FLAG WRINKLES
+========================================= */
+
+.flag-wave {
+    position: absolute;
+    left: -20%;
+    width: 140%;
+    height: 105px;
+    border-radius: 50%;
+    transform-origin: center;
+    overflow: hidden;
+
+    animation:
+        flagTravel 8s linear infinite,
+        flagRipple 2.8s ease-in-out infinite;
+}
+
+.flag-wave::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.18) 0px,
+            rgba(255, 255, 255, 0.04) 18px,
+            rgba(0, 0, 0, 0.10) 38px,
+            rgba(255, 255, 255, 0.16) 58px,
+            rgba(255, 255, 255, 0.02) 78px
+        );
+
+    opacity: 0.65;
+
+    transform:
+        skewY(-3deg)
+        scaleX(1.08);
+
+    animation:
+        wrinkleMove 2.2s ease-in-out infinite;
+}
+
+.flag-wave::after {
+    content: "";
+    position: absolute;
+    inset: -15% 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255,255,255,0.32) 18%,
+            transparent 31%,
+            rgba(0,0,0,0.10) 45%,
+            transparent 58%,
+            rgba(255,255,255,0.28) 72%,
+            transparent 88%
+        );
+
+    mix-blend-mode: overlay;
+    opacity: 0.75;
+
+    animation:
+        highlightMove 3.5s ease-in-out infinite;
+}
+
+.flag-wave-saffron {
+    top: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffad45 0%,
+            #ff9933 45%,
+            #e9821b 100%
+        );
+
+    box-shadow:
+        inset 0 12px 18px rgba(255,255,255,0.18),
+        inset 0 -12px 18px rgba(120,55,0,0.10);
+}
+
+.flag-wave-white {
+    top: 60px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f7f9fb 50%,
+            #e8edf2 100%
+        );
+
+    animation-delay: -2.6s;
+
+    box-shadow:
+        inset 0 12px 18px rgba(255,255,255,0.9),
+        inset 0 -12px 18px rgba(100,110,120,0.10);
+}
+
+.flag-wave-green {
+    top: 120px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #24a51c 0%,
+            #138808 50%,
+            #0b7105 100%
+        );
+
+    animation-delay: -5.2s;
+
+    box-shadow:
+        inset 0 12px 18px rgba(255,255,255,0.16),
+        inset 0 -12px 18px rgba(0,60,0,0.12);
+}
+
+@keyframes flagRipple {
+    0% {
+        border-radius: 48% 52% 45% 55%;
+    }
+
+    25% {
+        border-radius: 55% 45% 55% 45%;
+    }
+
+    50% {
+        border-radius: 43% 57% 50% 50%;
+    }
+
+    75% {
+        border-radius: 57% 43% 45% 55%;
+    }
+
+    100% {
+        border-radius: 48% 52% 45% 55%;
+    }
+}
+
+@keyframes wrinkleMove {
+    0% {
+        transform:
+            translateX(-30px)
+            skewY(-3deg)
+            scaleX(1.08);
+    }
+
+    50% {
+        transform:
+            translateX(30px)
+            skewY(3deg)
+            scaleX(1.12);
+    }
+
+    100% {
+        transform:
+            translateX(-30px)
+            skewY(-3deg)
+            scaleX(1.08);
+    }
+}
+
+@keyframes highlightMove {
+    0% {
+        transform: translateX(-12%);
+    }
+
+    50% {
+        transform: translateX(12%);
+    }
+
+    100% {
+        transform: translateX(-12%);
+    }
+}
+
+/* =========================================
+   EMPTY YEAR
+========================================= */
+
+.gallery-empty {
+    grid-column: 1 / -1;
+    padding: 45px 20px;
+    text-align: center;
+    border: 1px dashed #ccd5df;
+    border-radius: 16px;
+    background: #ffffff;
+    color: #718096;
+}
+
+.gallery-empty strong {
+    display: block;
+    margin-bottom: 6px;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    color: #17345f;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .gallery-year-filter,
+    .gallery-filter {
+        padding: 9px 17px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-controls {
+        margin-bottom: 40px;
+    }
+}
+/* =========================================
+   GALLERY PAGE HEADER
+   Matches the main website header
+   ========================================= */
+/* =========================================
+   VIBRANT WAVING TRICOLOUR
+   ========================================= */
+.gallery-page-heading {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 58px 20px 48px;
+
+    background: linear-gradient(
+        110deg,
+        #ff9933,
+        #ffffff,
+        #138808,
+        #ffffff,
+        #ff9933
+    );
+
+    background-size: 300% 100%;
+    animation: galleryTricolourWave 7s ease-in-out infinite;
+}
+@keyframes galleryTricolourWave {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.gallery-page-heading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 65%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.45),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    animation: galleryHeadingShine 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes galleryHeadingShine {
+    0% {
+        left: -120%;
+    }
+
+    45% {
+        left: 130%;
+    }
+
+    100% {
+        left: 130%;
+    }
+}
+
+.gallery-page-heading .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Keep heading above the tricolour */
+.gallery-page-heading .container {
+    position: relative;
+    z-index: 2;
+}
+.gallery-page-heading h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: clamp(3rem, 6vw, 5rem);
+    letter-spacing: 1px;
+    line-height: 1.15;
+}
+
+.gallery-page-heading p {
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 600;
+}
+
+.gallery-page-heading .section-label {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+/* =========================================
+   SHIVKUND — VIBRANT TRICOLOUR LOGO BACKGROUND
+========================================= */
+
+.gallery-section {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            115deg,
+            #fff7ed 0%,
+            #ffffff 42%,
+            #f3fff4 100%
+        );
+}
+
+/* Animated tricolour light across the FULL SCREEN */
+
+.gallery-section::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    bottom: -40%;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        115deg,
+        transparent 20%,
+        rgba(255, 153, 51, 0.22) 35%,
+        rgba(255, 255, 255, 0.45) 48%,
+        rgba(19, 136, 8, 0.22) 62%,
+        transparent 78%
+    );
+
+    background-size: 300% 300%;
+    animation: tricolourFlow 7s ease-in-out infinite;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* HUGE LOGO */
+.gallery-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 900px;
+    height: 900px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-image: url("../images/gallery-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    opacity: 0.20;
+
+    filter:
+        drop-shadow(0 0 18px rgba(255, 153, 51, 0.35))
+        drop-shadow(0 0 25px rgba(19, 136, 8, 0.25));
+
+    animation: logoPulse 6s ease-in-out infinite;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* Keep everything else above the animation */
+.gallery-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   FULL-WIDTH ANIMATED TRICOLOUR BACKGROUND
+========================================= */
+
+.gallery-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-section::after {
+    content: "";
+    position: absolute;
+
+    /* Cover the complete viewport width */
+    top: -50%;
+    bottom: -50%;
+    left: 50%;
+
+    width: 100vw;
+    height: 200%;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        115deg,
+        transparent 10%,
+        rgba(255, 153, 51, 0.28) 30%,
+        rgba(255, 255, 255, 0.50) 48%,
+        rgba(19, 136, 8, 0.28) 66%,
+        transparent 90%
+    );
+
+    background-size: 300% 300%;
+
+    animation: tricolourFlow 7s ease-in-out infinite;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Keep all Gallery content above the animation */
+.gallery-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================
+   LOGO BREATHING ANIMATION
+========================================= */
+
+@keyframes logoPulse {
+
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.17;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.06);
+        opacity: 0.25;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .gallery-section::before {
+        width: 600px;
+        height: 600px;
+        opacity: 0.18;
+    }
+
+}
+/* =========================================================
+   FINAL HERO — ONLY ONE BIG LOGO CIRCLE
+========================================================= */
+
+/* Remove the old decorative circles */
+.leadership-glow.glow-saffron,
+.leadership-glow.glow-green {
+    display: none !important;
+}
+
+
+/* =========================================================
+   BIG LOGO CIRCLE
+========================================================= */
+
+.leadership-hero-logo {
+    position: absolute;
+
+    right: 8%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+}
+
+
+/* ONE BIG CIRCLE */
+.hero-logo-ring {
+
+    width: 410px;
+    height: 410px;
+
+    padding: 8px;
+
+    border-radius: 50%;
+
+    /* Animated tricolour border */
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(
+            45deg,
+            #ff5a00,
+            #ff8c00,
+            #ffffff,
+            #ffffff,
+            #138a36,
+            #00a651,
+            #ffffff,
+            #ff5a00
+        ) border-box;
+
+    border: 8px solid transparent;
+
+    background-size:
+        100% 100%,
+        400% 400%;
+
+    animation:
+        heroLogoBorder 4s linear infinite,
+        heroLogoFloat 4s ease-in-out infinite;
+
+    box-shadow:
+        0 0 20px rgba(255, 90, 0, 0.75),
+        0 0 40px rgba(255, 255, 255, 0.85),
+        0 0 70px rgba(19, 138, 54, 0.70);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.hero-logo-ring img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    box-shadow:
+        inset 0 0 25px rgba(255,255,255,0.8);
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+/* Logo hover */
+.hero-logo-ring:hover img {
+
+    transform: scale(1.05);
+
+    filter:
+        brightness(1.08)
+        saturate(1.18);
+}
+
+
+/* =========================================================
+   MOVING TRICOLOUR BORDER
+========================================================= */
+
+@keyframes heroLogoBorder {
+
+    0% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+
+    25% {
+        background-position:
+            0 0,
+            100% 50%;
+    }
+
+    50% {
+        background-position:
+            0 0,
+            100% 100%;
+    }
+
+    75% {
+        background-position:
+            0 0,
+            0% 100%;
+    }
+
+    100% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+}
+
+
+/* =========================================================
+   GENTLE FLOATING
+========================================================= */
+
+@keyframes heroLogoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .leadership-hero-logo {
+
+        position: relative;
+
+        right: auto;
+        top: auto;
+
+        transform: none;
+
+        margin: 35px auto 0;
+    }
+
+    .hero-logo-ring {
+
+        width: 270px;
+        height: 270px;
+
+        border-width: 6px;
+
+        padding: 6px;
+    }
+}

@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Shivkund Yuva Sah Seva Samiti Annual Examination Registration Portal for Classes 6 to 10.">
+
+    <title>Examination Registration | Shivkund Yuva Sah Seva Samiti</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Registration CSS -->
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     PAGE HEADER
+========================================================= -->
+
+<header class="registration-header">
+
+    <div class="header-inner">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-logo">
+                <img src="images/logo.jpg"
+                     alt="Shivkund Yuva Sah Seva Samiti Logo">
+            </div>
+
+            <div class="brand-text">
+                <strong>Shivkund Yuva Sah Seva Samiti</strong>
+                <span>Education • Culture • Youth Development</span>
+            </div>
+
+        </a>
+
+        <a href="index.html" class="back-home">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="registration-hero">
+
+    <div class="hero-pattern"></div>
+
+    <div class="hero-content">
+
+        <span class="hero-badge">
+            ANNUAL EXAMINATION • 2026
+        </span>
+
+        <h1>
+            Examination
+            <span>Registration</span>
+        </h1>
+
+        <p>
+            Take your next step towards knowledge, confidence
+            and excellence.
+        </p>
+
+        <div class="hero-line">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     REGISTRATION OVERVIEW
+========================================================= -->
+
+<section class="registration-wrapper">
+
+    <div class="registration-container">
+
+
+        <!-- =================================================
+             TOP INFORMATION CARDS
+        ================================================== -->
+
+        <div class="registration-highlights">
+
+            <div class="highlight-card">
+
+                <div class="highlight-icon">
+                    ₹
+                </div>
+
+                <div>
+                    <small>REGISTRATION FEE</small>
+                    <strong>₹20</strong>
+                </div>
+
+            </div>
+
+
+            <div class="highlight-card">
+
+                <div class="highlight-icon">
+                    6–10
+                </div>
+
+                <div>
+                    <small>ELIGIBLE CLASSES</small>
+                    <strong>Classes 6 to 10</strong>
+                </div>
+
+            </div>
+
+
+            <div class="highlight-card">
+
+                <div class="highlight-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <small>REGISTRATION</small>
+                    <strong>Online</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             MAIN REGISTRATION CARD
+        ================================================== -->
+
+        <div class="registration-card">
+
+
+            <!-- FORM HEADER -->
+
+            <div class="form-header">
+
+                <div>
+
+                    <span class="section-kicker">
+                        STEP 1
+                    </span>
+
+                    <h2>
+                        Student Registration
+                    </h2>
+
+                    <p>
+                        Please enter the student's details carefully.
+                        Information submitted here may be used for
+                        examination records and communication.
+                    </p>
+
+                </div>
+
+                <div class="required-note">
+                    <span>*</span>
+                    Required fields
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="form-progress">
+
+                <div class="progress-step active">
+                    <span>1</span>
+                    <small>Student Details</small>
+                </div>
+
+                <div class="progress-line"></div>
+
+                <div class="progress-step">
+                    <span>2</span>
+                    <small>Payment</small>
+                </div>
+
+                <div class="progress-line"></div>
+
+                <div class="progress-step">
+                    <span>3</span>
+                    <small>Confirmation</small>
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 FORM
+            ================================================== -->
+
+            <form id="registrationForm"
+                  novalidate>
+
+
+                <!-- =============================================
+                     STUDENT INFORMATION
+                ============================================== -->
+
+                <div class="form-section">
+
+                    <div class="form-section-title">
+
+                        <div class="section-number">
+                            01
+                        </div>
+
+                        <div>
+                            <h3>Student Information</h3>
+                            <p>Basic information about the participant</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- Student Name -->
+
+                        <div class="form-group full">
+
+                            <label for="studentName">
+                                Student Full Name
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="studentName"
+                                name="studentName"
+                                placeholder="Enter student's full name"
+                                autocomplete="name"
+                                required
+                            >
+
+                            <small class="field-error"
+                                   id="studentNameError"></small>
+
+                        </div>
+
+
+                        <!-- Father's Name -->
+
+                        <div class="form-group">
+
+                            <label for="fatherName">
+                                Father's Name
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fatherName"
+                                name="fatherName"
+                                placeholder="Enter father's name"
+                                required
+                            >
+
+                            <small class="field-error"
+                                   id="fatherNameError"></small>
+
+                        </div>
+
+
+                        <!-- Mother's Name -->
+
+                        <div class="form-group">
+
+                            <label for="motherName">
+                                Mother's Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="motherName"
+                                name="motherName"
+                                placeholder="Enter mother's name"
+                            >
+
+                        </div>
+
+
+<!-- Date of Birth -->
+
+<div class="form-group">
+
+    <label>
+        Date of Birth
+        <span>*</span>
+    </label>
+
+    <div style="display:grid; grid-template-columns:1fr 1.5fr 1fr; gap:10px;">
+
+        <select id="dobDay" required>
+            <option value="">Day</option>
+        </select>
+
+        <select id="dobMonth" required>
+            <option value="">Month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+
+        <select id="dobYear" required>
+            <option value="">Year</option>
+        </select>
+
+    </div>
+
+    <!-- Hidden field used by the existing registration system -->
+    <input
+        type="hidden"
+        id="dob"
+        name="dob"
+    >
+
+    <small class="field-error"
+           id="dobError"></small>
+
+</div>
+
+
+
+                        <!-- Gender -->
+
+                        <div class="form-group">
+
+                            <label for="gender">
+                                Gender
+                                <span>*</span>
+                            </label>
+
+                            <select id="gender"
+                                    name="gender"
+                                    required>
+
+                                <option value="">
+                                    Select gender
+                                </option>
+
+                                <option value="Male">
+                                    Male
+                                </option>
+
+                                <option value="Female">
+                                    Female
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                            <small class="field-error"
+                                   id="genderError"></small>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================================
+                     ACADEMIC INFORMATION
+                ============================================== -->
+
+                <div class="form-section">
+
+                    <div class="form-section-title">
+
+                        <div class="section-number">
+                            02
+                        </div>
+
+                        <div>
+                            <h3>Academic Information</h3>
+                            <p>Tell us about the student's school and class</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- Class -->
+
+                        <div class="form-group">
+
+                            <label for="class">
+                                Class
+                                <span>*</span>
+                            </label>
+
+                            <select id="class"
+                                    name="class"
+                                    required>
+
+                                <option value="">
+                                    Select class
+                                </option>
+
+                                <option value="6">
+                                    Class 6
+                                </option>
+
+                                <option value="7">
+                                    Class 7
+                                </option>
+
+                                <option value="8">
+                                    Class 8
+                                </option>
+
+                                <option value="9">
+                                    Class 9
+                                </option>
+
+                                <option value="10">
+                                    Class 10
+                                </option>
+
+                            </select>
+
+                            <small class="field-error"
+                                   id="classError"></small>
+
+                        </div>
+
+
+                        <!-- School -->
+
+                        <div class="form-group">
+
+                            <label for="school">
+                                School / Institution
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="school"
+                                name="school"
+                                placeholder="Enter school name"
+                                required
+                            >
+
+                            <small class="field-error"
+                                   id="schoolError"></small>
+
+                        </div>
+
+
+<!-- DISTRICT -->
+<div class="form-group">
+
+    <label for="district">
+        District
+        <span>*</span>
+    </label>
+
+    <select
+        id="district"
+        name="district"
+        required>
+
+        <option value="">
+            Select district
+        </option>
+
+        <option value="Araria">Araria</option>
+        <option value="Arwal">Arwal</option>
+        <option value="Aurangabad">Aurangabad</option>
+        <option value="Banka">Banka</option>
+        <option value="Begusarai">Begusarai</option>
+        <option value="Bhagalpur">Bhagalpur</option>
+        <option value="Bhojpur">Bhojpur</option>
+        <option value="Buxar">Buxar</option>
+        <option value="Darbhanga">Darbhanga</option>
+        <option value="East Champaran">East Champaran</option>
+        <option value="Gaya">Gaya</option>
+        <option value="Gopalganj">Gopalganj</option>
+        <option value="Jamui">Jamui</option>
+        <option value="Jehanabad">Jehanabad</option>
+        <option value="Kaimur">Kaimur</option>
+        <option value="Katihar">Katihar</option>
+        <option value="Khagaria">Khagaria</option>
+        <option value="Kishanganj">Kishanganj</option>
+        <option value="Lakhisarai">Lakhisarai</option>
+        <option value="Madhepura">Madhepura</option>
+        <option value="Madhubani">Madhubani</option>
+        <option value="Munger">Munger</option>
+        <option value="Muzaffarpur">Muzaffarpur</option>
+        <option value="Nalanda">Nalanda</option>
+        <option value="Nawada">Nawada</option>
+        <option value="Patna">Patna</option>
+        <option value="Purnia">Purnia</option>
+        <option value="Rohtas">Rohtas</option>
+        <option value="Saharsa">Saharsa</option>
+        <option value="Samastipur">Samastipur</option>
+        <option value="Saran">Saran</option>
+        <option value="Sheikhpura">Sheikhpura</option>
+        <option value="Sheohar">Sheohar</option>
+        <option value="Sitamarhi">Sitamarhi</option>
+        <option value="Siwan">Siwan</option>
+        <option value="Supaul">Supaul</option>
+        <option value="Vaishali">Vaishali</option>
+        <option value="West Champaran">West Champaran</option>
+
+    </select>
+
+    <small
+        class="field-error"
+        id="districtError">
+    </small>
+
+</div>
+
+
+<!-- BLOCK -->
+<div class="form-group">
+
+    <label for="block">
+        Block
+    </label>
+
+    <select
+        id="block"
+        name="block"
+        disabled>
+
+        <option value="">
+            Select block
+        </option>
+
+    </select>
+
+    <small
+        class="field-error"
+        id="blockError">
+    </small>
+
+</div>
+
+
+<!-- VILLAGE -->
+<div class="form-group">
+
+    <label for="village">
+        Village
+        <span>*</span>
+    </label>
+
+    <!-- Used when district is Munger -->
+    <select
+        id="village"
+        name="village"
+        disabled>
+
+        <option value="">
+            Select village
+        </option>
+
+    </select>
+
+    <!-- Used for districts other than Munger -->
+    <input
+        type="text"
+        id="villageManual"
+        name="villageManual"
+        placeholder="Enter village name"
+        style="display: none;">
+
+    <small
+        class="field-error"
+        id="villageError">
+    </small>
+
+</div>
+
+
+
+                        <!-- School Type -->
+
+                        <div class="form-group">
+
+                            <label for="schoolType">
+                                School Type
+                            </label>
+
+                            <select id="schoolType"
+                                    name="schoolType">
+
+                                <option value="">
+                                    Select school type
+                                </option>
+
+                                <option value="Government">
+                                    Government
+                                </option>
+
+                                <option value="Private">
+                                    Private
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================================
+                     CONTACT INFORMATION
+                ============================================== -->
+
+                <div class="form-section">
+
+                    <div class="form-section-title">
+
+                        <div class="section-number">
+                            03
+                        </div>
+
+                        <div>
+                            <h3>Contact Information</h3>
+                            <p>Used for important examination communication</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+<!-- Mobile + OTP Verification -->
+<div class="form-group">
+
+    <label for="mobile">
+        Mobile Number
+        <span>*</span>
+    </label>
+
+    <div class="input-prefix">
+        <span>+91</span>
+
+        <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            placeholder="10-digit mobile number"
+            maxlength="10"
+            inputmode="numeric"
+            autocomplete="tel"
+            required
+        >
+
+        <button
+            type="button"
+            id="sendOtpButton"
+            class="otp-button">
+            Send OTP
+        </button>
+    </div>
+
+    <small
+        class="field-error"
+        id="mobileError">
+    </small>
+
+    <!-- OTP AREA -->
+    <div
+        id="otpArea"
+        class="otp-area"
+        style="display: none;">
+
+        <label for="otp">
+            Enter OTP
+        </label>
+
+        <div class="otp-row">
+
+            <input
+                type="text"
+                id="otp"
+                name="otp"
+                placeholder="6-digit OTP"
+                maxlength="6"
+                inputmode="numeric"
+                autocomplete="one-time-code"
+            >
+
+            <button
+                type="button"
+                id="verifyOtpButton"
+                class="otp-button">
+                Verify OTP
+            </button>
+
+        </div>
+
+        <small
+            id="otpMessage"
+            class="otp-message">
+        </small>
+
+        <div
+            id="otpTimer"
+            class="otp-timer">
+        </div>
+
+    </div>
+
+    <!-- VERIFIED STATE -->
+    <div
+        id="mobileVerified"
+        class="mobile-verified"
+        style="display: none;">
+
+        ✓ Mobile number verified
+
+    </div>
+
+</div>
+
+
+                        <!-- Alternate -->
+
+                        <div class="form-group">
+
+                            <label for="alternateMobile">
+                                Alternate Mobile Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="alternateMobile"
+                                name="alternateMobile"
+                                placeholder="Optional"
+                                maxlength="10"
+                                inputmode="numeric"
+                            >
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="form-group full">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Optional email address"
+                                autocomplete="email"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================================
+                     ADDRESS
+                ============================================== -->
+
+                <div class="form-section">
+
+                    <div class="form-section-title">
+
+                        <div class="section-number">
+                            04
+                        </div>
+
+                        <div>
+                            <h3>Address</h3>
+                            <p>Current residential information</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group full">
+
+                            <label for="address">
+                                Full Address
+                                <span>*</span>
+                            </label>
+
+                            <textarea
+                                id="address"
+                                name="address"
+                                rows="4"
+                                placeholder="Enter complete address"
+                                required
+                            ></textarea>
+
+                            <small class="field-error"
+                                   id="addressError"></small>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================================
+                     PREVIOUS PARTICIPATION
+                ============================================== -->
+
+                <div class="form-section">
+
+                    <div class="form-section-title">
+
+                        <div class="section-number">
+                            05
+                        </div>
+
+                        <div>
+                            <h3>Participation Details</h3>
+                            <p>Help us understand your participation history</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group full">
+
+                            <label>
+                                Have you participated in Shivkund
+                                examination before?
+                                <span>*</span>
+                            </label>
+
+
+                            <div class="radio-group">
+
+                                <label class="radio-option">
+
+                                    <input
+                                        type="radio"
+                                        name="previousParticipation"
+                                        value="Yes"
+                                        required
+                                    >
+
+                                    <span>Yes</span>
+
+                                </label>
+
+
+                                <label class="radio-option">
+
+                                    <input
+                                        type="radio"
+                                        name="previousParticipation"
+                                        value="No"
+                                    >
+
+                                    <span>No</span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================================
+                     DECLARATION
+                ============================================== -->
+
+                <div class="declaration-box">
+
+                    <div class="declaration-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>Declaration</h3>
+
+                        <p>
+                            I confirm that the information provided
+                            above is true and correct to the best of
+                            my knowledge. I understand that incorrect
+                            information may affect my registration.
+                        </p>
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="declaration"
+                                required
+                            >
+
+                            <span>
+                                I agree to the above declaration.
+                                <b>*</b>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================================
+                     PAYMENT PREVIEW
+                ============================================== -->
+
+                <div class="payment-preview">
+
+                    <div class="payment-left">
+
+                        <span class="payment-kicker">
+                            REGISTRATION FEE
+                        </span>
+
+                        <h3>
+                            Examination Registration
+                        </h3>
+
+                        <p>
+                            Complete payment in the next step
+                            after submitting your student details.
+                        </p>
+
+                    </div>
+
+
+                    <div class="payment-amount">
+
+                        <small>
+                            TOTAL
+                        </small>
+
+                        <strong>
+                            ₹20
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================================
+                     SUBMIT
+                ============================================== -->
+
+                <div class="submit-area">
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                        id="continueButton">
+
+                        <span>
+                            Continue to Payment
+                        </span>
+
+                        <strong>
+                            →
+                        </strong>
+
+                    </button>
+
+                    <p class="secure-note">
+                        🔒 Your information is handled securely
+                    </p>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+        <!-- =================================================
+             HELP SECTION
+        ================================================== -->
+
+        <div class="registration-help">
+
+            <div class="help-icon">
+                ?
+            </div>
+
+            <div>
+
+                <h3>
+                    Need help with registration?
+                </h3>
+
+                <p>
+                    Please make sure all required information is
+                    entered correctly before continuing.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ORGANISATION INFORMATION
+        ================================================== -->
+
+        <div class="organisation-note">
+
+            <strong>
+                Shivkund Yuva Sah Seva Samiti
+            </strong>
+
+            <span>
+                AT- SHIVKUND KURMI TOLA, PS- HEMJAPUR,
+                DIST- MUNGER, PIN 811202
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     SUCCESS MODAL
+========================================================= -->
+
+<div class="success-modal"
+     id="successModal">
+
+    <div class="success-card">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>
+            Details Saved
+        </h2>
+
+        <p>
+            Your student information has been validated successfully.
+        </p>
+
+        <div class="success-next">
+            Next step:
+            <strong>Payment</strong>
+        </div>
+
+        <button
+            type="button"
+            id="closeSuccess">
+            Continue
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     PAYMENT SECTION
+========================================================= -->
+
+<section
+    id="paymentSection"
+    class="payment-section"
+    style="display: none;">
+
+    <div class="payment-container">
+
+
+        <!-- =====================================================
+             PAYMENT HEADER
+        ====================================================== -->
+
+        <div class="payment-header">
+
+            <div class="payment-badge">
+                STEP 2 • PAYMENT
+            </div>
+
+            <h2>
+                Complete Your Examination Payment
+            </h2>
+
+            <p>
+                Your student details have been successfully saved.
+                Complete the examination fee payment to continue.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             REGISTRATION SUMMARY
+        ====================================================== -->
+
+        <div class="payment-summary">
+
+            <div class="payment-summary-item">
+
+                <span>
+                    Student
+                </span>
+
+                <strong id="paymentStudentName">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="payment-summary-item">
+
+                <span>
+                    Class
+                </span>
+
+                <strong id="paymentStudentClass">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="payment-summary-item">
+
+                <span>
+                    Mobile
+                </span>
+
+                <strong id="paymentStudentMobile">
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             PAYMENT AMOUNT
+        ====================================================== -->
+
+        <div class="payment-amount-card">
+
+            <span>
+                Examination Fee
+            </span>
+
+            <strong id="paymentAmount">
+                ₹20
+            </strong>
+
+            <small>
+                One-time registration fee
+            </small>
+
+        </div>
+
+
+        <!-- =====================================================
+             QR PAYMENT
+        ====================================================== -->
+
+        <div class="payment-method-card">
+
+            <div class="payment-card-heading">
+
+                <span class="payment-number">
+                    1
+                </span>
+
+                <div>
+
+                    <h3>
+                        Scan & Pay
+                    </h3>
+
+                    <p>
+                        Open any UPI app and scan the QR code.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="payment-qr-wrapper">
+
+                <div class="payment-qr">
+
+                    <img
+                        src="images/payment-qr.png"
+                        id="paymentQrImage"
+                        alt="Shivkund examination payment QR code"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="payment-security-note">
+
+                <span>
+                    🔒
+                </span>
+
+                <p>
+                    Pay only through the official QR code
+                    displayed on this page.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             UPI ID
+        ====================================================== -->
+
+        <div class="payment-method-card">
+
+            <div class="payment-card-heading">
+
+                <span class="payment-number">
+                    2
+                </span>
+
+                <div>
+
+                    <h3>
+                        Pay using UPI ID
+                    </h3>
+
+                    <p>
+                        You can also manually enter the UPI ID
+                        in your preferred UPI app.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="upi-id-box">
+
+                <span id="paymentUpiId">
+                    example@upi
+                </span>
+
+                <button
+                    type="button"
+                    id="copyUpiButton">
+                    Copy
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             UPI APPS
+        ====================================================== -->
+
+        <div class="payment-method-card">
+
+            <div class="payment-card-heading">
+
+                <span class="payment-number">
+                    3
+                </span>
+
+                <div>
+
+                    <h3>
+                        UPI Apps
+                    </h3>
+
+                    <p>
+                        You can pay using any supported UPI application.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="upi-app-grid">
+
+
+                <div class="upi-app-item">
+
+                    <div class="upi-app-icon">
+                        G
+                    </div>
+
+                    <span>
+                        Google Pay
+                    </span>
+
+                </div>
+
+
+                <div class="upi-app-item">
+
+                    <div class="upi-app-icon">
+                        P
+                    </div>
+
+                    <span>
+                        PhonePe
+                    </span>
+
+                </div>
+
+
+                <div class="upi-app-item">
+
+                    <div class="upi-app-icon">
+                        Pay
+                    </div>
+
+                    <span>
+                        Paytm
+                    </span>
+
+                </div>
+
+
+                <div class="upi-app-item">
+
+                    <div class="upi-app-icon">
+                        BH
+                    </div>
+
+                    <span>
+                        BHIM
+                    </span>
+
+                </div>
+
+
+                <div class="upi-app-item">
+
+                    <div class="upi-app-icon">
+                        UPI
+                    </div>
+
+                    <span>
+                        Other UPI
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             PAYMENT CONFIRMATION
+        ====================================================== -->
+
+        <div class="payment-method-card payment-confirm-card">
+
+            <div class="payment-card-heading">
+
+                <span class="payment-number">
+                    4
+                </span>
+
+                <div>
+
+                    <h3>
+                        Submit Payment Details
+                    </h3>
+
+                    <p>
+                        After completing payment, enter the
+                        transaction/reference number shown by your UPI app.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="payment-form-group">
+
+                <label for="paymentMethod">
+
+                    Payment Method
+
+                    <span>
+                        *
+                    </span>
+
+                </label>
+
+
+                <select id="paymentMethod">
+
+                    <option value="">
+                        Select payment method
+                    </option>
+
+                    <option value="Google Pay">
+                        Google Pay
+                    </option>
+
+                    <option value="PhonePe">
+                        PhonePe
+                    </option>
+
+                    <option value="Paytm">
+                        Paytm
+                    </option>
+
+                    <option value="BHIM">
+                        BHIM
+                    </option>
+
+                    <option value="Other UPI">
+                        Other UPI
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="payment-form-group">
+
+                <label for="paymentReference">
+
+                    UPI Transaction / UTR Number
+
+                    <span>
+                        *
+                    </span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="paymentReference"
+                    placeholder="Enter transaction / UTR number"
+                    maxlength="100"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <button
+                type="button"
+                id="submitPaymentButton"
+                class="payment-submit-button">
+
+                I Have Completed Payment
+
+            </button>
+
+
+            <div
+                id="paymentMessage"
+                class="payment-message">
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             IMPORTANT NOTICE
+        ====================================================== -->
+
+        <div class="payment-warning">
+
+            <strong>
+                Important
+            </strong>
+
+            <p>
+                Do not submit a fake or incorrect transaction number.
+                Your payment will be verified before your examination
+                registration is confirmed.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SUPABASE + REGISTRATION JAVASCRIPT
+     MUST REMAIN AFTER THE PAYMENT SECTION
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/munger_villages.js"></script>
+<script src="js/registration.js"></script>
+
+
+</body>
+</html>

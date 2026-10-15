@@ -1,0 +1,3494 @@
+/* =========================================================
+   SHIVKUND YUVA SAH SEVA SAMITI
+   PREMIUM LEADERSHIP PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE FOUNDATION
+   ========================================================= */
+
+.leadership-page {
+    --lead-saffron: #ff7a00;
+    --lead-saffron-light: #fff1e5;
+    --lead-green: #138a45;
+    --lead-green-light: #e9f8ef;
+    --lead-navy: #102a43;
+    --lead-blue: #163b5c;
+    --lead-text: #243b53;
+    --lead-muted: #667085;
+    --lead-white: #ffffff;
+    --lead-cream: #fffaf5;
+    --lead-line: #e6eaf0;
+
+    color: var(--lead-text);
+    background:
+        radial-gradient(circle at 5% 20%, rgba(255, 122, 0, 0.055), transparent 25%),
+        radial-gradient(circle at 95% 55%, rgba(19, 138, 69, 0.055), transparent 25%),
+        #f8fafc;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   GENERAL CONTAINER
+   ========================================================= */
+
+.leadership-page .container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.leadership-hero {
+    position: relative;
+    min-height: 610px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f1 0%,
+            #ffffff 46%,
+            #f2fbf6 100%
+        );
+}
+
+
+/* large background patriotic glow */
+
+.leadership-hero::before {
+    content: "";
+    position: absolute;
+    width: 850px;
+    height: 850px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        conic-gradient(
+            from 0deg,
+            rgba(255, 122, 0, 0.10),
+            rgba(255, 255, 255, 0.03),
+            rgba(19, 138, 69, 0.10),
+            rgba(255, 255, 255, 0.03),
+            rgba(255, 122, 0, 0.10)
+        );
+
+    border-radius: 50%;
+
+    filter: blur(5px);
+
+    animation: heroRotate 24s linear infinite;
+
+    pointer-events: none;
+}
+
+
+.leadership-hero::after {
+    content: "";
+
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    bottom: -110px;
+
+    height: 230px;
+
+    background: linear-gradient(
+        180deg,
+        transparent,
+        rgba(19, 138, 69, 0.08)
+    );
+
+    border-radius: 50%;
+
+    transform: rotate(-2deg);
+}
+
+
+/* decorative glowing circles */
+
+.leadership-glow {
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    opacity: 0.45;
+
+    pointer-events: none;
+}
+
+
+.glow-saffron {
+    top: 30px;
+    left: -100px;
+    background: rgba(255, 122, 0, 0.28);
+
+    animation: floatingGlow 7s ease-in-out infinite;
+}
+
+
+.glow-green {
+    right: -100px;
+    bottom: 30px;
+    background: rgba(19, 138, 69, 0.25);
+
+    animation: floatingGlow 8s ease-in-out infinite reverse;
+}
+
+
+.leadership-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 90px 20px 80px;
+}
+
+
+.leadership-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 18px;
+
+    border: 1px solid rgba(255, 122, 0, 0.28);
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    color: var(--lead-saffron);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+
+    box-shadow:
+        0 8px 30px rgba(16, 42, 67, 0.06);
+
+    backdrop-filter: blur(10px);
+
+    margin-bottom: 22px;
+}
+
+
+.leadership-hero h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(48px, 7vw, 86px);
+
+    line-height: 1.04;
+
+    letter-spacing: -0.035em;
+
+    color: var(--lead-navy);
+}
+
+
+.leadership-hero h1 span {
+    display: inline-block;
+
+    background: linear-gradient(
+        90deg,
+        #e96800,
+        #ff8b18 38%,
+        #138a45 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation: titleShimmer 6s ease-in-out infinite;
+}
+
+
+.leadership-hero p {
+    max-width: 670px;
+
+    margin: 28px auto 0;
+
+    color: var(--lead-muted);
+
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+
+.hero-tricolour-line {
+    display: flex;
+
+    width: 180px;
+    height: 5px;
+
+    margin: 34px auto 0;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(16, 42, 67, 0.10);
+}
+
+
+.hero-tricolour-line span {
+    flex: 1;
+}
+
+
+.line-saffron {
+    background: #ff7a00;
+}
+
+
+.line-white {
+    background: #ffffff;
+}
+
+
+.line-green {
+    background: #138a45;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.leadership-intro {
+    padding: 90px 0 55px;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+
+.section-mini-label {
+    display: inline-block;
+
+    color: var(--lead-green);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+
+.leadership-intro h2 {
+    margin: 12px 0 18px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    color: var(--lead-navy);
+
+    font-size: clamp(32px, 4vw, 48px);
+}
+
+
+.leadership-intro p {
+    width: min(760px, 100%);
+
+    margin: 0 auto;
+
+    color: var(--lead-muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TEAM AT A GLANCE
+   ========================================================= */
+
+.team-glance-section {
+    padding: 45px 0 90px;
+
+    background: #ffffff;
+}
+
+
+.team-heading {
+    text-align: center;
+
+    margin-bottom: 42px;
+}
+
+
+.team-kicker {
+    display: inline-block;
+
+    color: var(--lead-saffron);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+
+.team-heading h2 {
+    margin: 10px 0 16px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    color: var(--lead-navy);
+
+    font-size: clamp(30px, 4vw, 44px);
+}
+
+
+.heading-line {
+    width: 75px;
+    height: 4px;
+
+    margin: 0 auto;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        90deg,
+        #ff7a00 0 33%,
+        #ffffff 33% 66%,
+        #138a45 66%
+    );
+
+    box-shadow:
+        0 3px 14px rgba(16, 42, 67, 0.10);
+}
+
+
+.glance-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.glance-card {
+    position: relative;
+
+    padding: 28px 18px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f9fbfd
+        );
+
+    border: 1px solid var(--lead-line);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(16, 42, 67, 0.06);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.glance-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #ff7a00,
+        #ffffff,
+        #138a45
+    );
+}
+
+
+.glance-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px rgba(16, 42, 67, 0.12);
+}
+
+
+.glance-card strong {
+    display: block;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 34px;
+
+    color: var(--lead-navy);
+}
+
+
+.glance-card span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--lead-muted);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   GENERAL TEAM SECTIONS
+   ========================================================= */
+
+.leadership-section {
+    padding: 95px 0;
+
+    position: relative;
+}
+
+
+.leadership-section:nth-of-type(even) {
+    background: #ffffff;
+}
+
+
+.leadership-section:nth-of-type(odd) {
+    background:
+        linear-gradient(
+            180deg,
+            #f8fafc,
+            #ffffff
+        );
+}
+
+
+/* =========================================================
+   CORE LEADERSHIP
+   ========================================================= */
+
+.core-leadership {
+    background:
+        radial-gradient(
+            circle at 10% 30%,
+            rgba(255, 122, 0, 0.07),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(19, 138, 69, 0.07),
+            transparent 28%
+        ),
+        #f8fafc;
+}
+
+
+.core-leaders-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 26px;
+
+    align-items: stretch;
+}
+
+
+.leader-card {
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(16, 42, 67, 0.08);
+
+    border-radius: 26px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(16, 42, 67, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.leader-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 30px 65px rgba(16, 42, 67, 0.15);
+}
+
+
+/* large photo area */
+
+.leader-card-primary .leader-photo {
+    height: 390px;
+}
+
+
+.leader-photo {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff3e7,
+            #f4faf6
+        );
+
+    overflow: hidden;
+}
+
+
+.leader-photo::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(16, 42, 67, 0.18)
+        );
+
+    pointer-events: none;
+}
+
+
+.leader-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    transition:
+        transform 0.7s cubic-bezier(.2,.7,.2,1),
+        filter 0.5s ease;
+}
+
+
+.leader-card:hover .leader-photo img {
+    transform: scale(1.06);
+
+    filter: saturate(1.08);
+}
+
+
+.leader-number {
+    position: absolute;
+
+    z-index: 3;
+
+    top: 18px;
+    right: 18px;
+
+    width: 45px;
+    height: 45px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    color: var(--lead-navy);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 20px rgba(16, 42, 67, 0.16);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.leader-content {
+    padding: 27px 28px 30px;
+}
+
+
+.leader-role,
+.team-role {
+    display: inline-block;
+
+    color: var(--lead-saffron);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+.leader-content h3 {
+    margin: 8px 0 10px;
+
+    color: var(--lead-navy);
+
+    font-size: 24px;
+}
+
+
+.leader-content p {
+    margin: 0;
+
+    color: var(--lead-muted);
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   STANDARD TEAM GRID
+   ========================================================= */
+
+.team-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+.team-card {
+    position: relative;
+
+    background: #ffffff;
+
+    border: 1px solid var(--lead-line);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 38px rgba(16, 42, 67, 0.065);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.team-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(255, 122, 0, 0.25);
+
+    box-shadow:
+        0 25px 50px rgba(16, 42, 67, 0.12);
+}
+
+
+.team-photo {
+    position: relative;
+
+    height: 315px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff2e7,
+            #edf8f1
+        );
+}
+
+
+.team-photo::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 60%,
+            rgba(16, 42, 67, 0.12)
+        );
+
+    pointer-events: none;
+}
+
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.65s cubic-bezier(.2,.7,.2,1),
+        filter 0.4s ease;
+}
+
+
+.team-card:hover .team-photo img {
+    transform: scale(1.065);
+
+    filter: saturate(1.06);
+}
+
+
+.team-card-content {
+    padding: 21px 23px 24px;
+
+    background: #ffffff;
+}
+
+
+.team-card-content h3 {
+    margin: 7px 0 0;
+
+    color: var(--lead-navy);
+
+    font-size: 21px;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   SECTION ACCENTS
+   ========================================================= */
+
+.examination-team {
+    border-top: 1px solid rgba(16, 42, 67, 0.04);
+}
+
+
+.choreography-team {
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf5,
+            #ffffff
+        );
+}
+
+
+.hosts-team {
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f5faf7
+        );
+}
+
+
+.advisors-team {
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #ffffff
+        );
+}
+
+
+.management-team {
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #fffaf5
+        );
+}
+
+
+/* =========================================================
+   SOCIAL / CONNECT SECTION
+   ========================================================= */
+
+.social-section {
+    padding: 105px 0;
+
+    background:
+        radial-gradient(
+            circle at 10% 30%,
+            rgba(255, 122, 0, 0.08),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(19, 138, 69, 0.08),
+            transparent 25%
+        ),
+        #f8fafc;
+}
+
+
+.social-intro {
+    max-width: 680px;
+
+    margin: 20px auto 0;
+
+    color: var(--lead-muted);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+.social-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.social-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 26px;
+
+    color: var(--lead-text);
+
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid var(--lead-line);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 35px rgba(16, 42, 67, 0.06);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.social-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 5px;
+
+    background: linear-gradient(
+        180deg,
+        #ff7a00,
+        #ffffff,
+        #138a45
+    );
+}
+
+
+.social-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 25px 50px rgba(16, 42, 67, 0.12);
+}
+
+
+.social-icon {
+    flex: 0 0 58px;
+
+    width: 58px;
+    height: 58px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f2f5f8,
+            #ffffff
+        );
+
+    color: var(--lead-navy);
+
+    font-size: 27px;
+    font-weight: 800;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(16, 42, 67, 0.06);
+}
+
+
+.social-card span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--lead-muted);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+}
+
+
+.social-card strong {
+    display: block;
+
+    color: var(--lead-navy);
+
+    font-size: 15px;
+
+    line-height: 1.35;
+}
+
+
+.social-card small {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--lead-green);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.leadership-closing {
+    padding: 80px 0;
+
+    background: #ffffff;
+}
+
+
+.closing-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 42px 48px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            #fff6ed 0%,
+            #ffffff 48%,
+            #eff9f3 100%
+        );
+
+    border: 1px solid rgba(16, 42, 67, 0.08);
+
+    box-shadow:
+        0 20px 55px rgba(16, 42, 67, 0.08);
+}
+
+
+.closing-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #ff7a00 0 33.33%,
+        #ffffff 33.33% 66.66%,
+        #138a45 66.66%
+    );
+}
+
+
+.closing-chakra {
+    flex: 0 0 72px;
+
+    width: 72px;
+    height: 72px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(16, 42, 67, 0.12);
+
+    color: var(--lead-navy);
+
+    font-size: 32px;
+
+    animation: chakraSpin 15s linear infinite;
+}
+
+
+.closing-card span {
+    color: var(--lead-green);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+
+.closing-card h2 {
+    margin: 7px 0 8px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    color: var(--lead-navy);
+
+    font-size: clamp(25px, 4vw, 38px);
+}
+
+
+.closing-card p {
+    margin: 0;
+
+    color: var(--lead-muted);
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.leadership-footer {
+    padding: 42px 0 45px;
+
+    text-align: center;
+
+    background: var(--lead-navy);
+
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+.footer-tricolour {
+    display: flex;
+
+    width: 150px;
+    height: 4px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+
+.footer-tricolour span {
+    flex: 1;
+}
+
+
+.footer-tricolour span:nth-child(1) {
+    background: #ff7a00;
+}
+
+
+.footer-tricolour span:nth-child(2) {
+    background: #ffffff;
+}
+
+
+.footer-tricolour span:nth-child(3) {
+    background: #138a45;
+}
+
+
+.leadership-footer p {
+    margin: 6px 0;
+
+    font-size: 13px;
+}
+
+
+.footer-subtitle {
+    opacity: 0.62;
+
+    font-size: 11px !important;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes heroRotate {
+
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+}
+
+
+@keyframes floatingGlow {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-25px) scale(1.08);
+    }
+
+}
+
+
+@keyframes titleShimmer {
+
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.15);
+    }
+
+}
+
+
+@keyframes chakraSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .core-leaders-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .core-leaders-grid .leader-card:last-child {
+        grid-column: 1 / -1;
+
+        width: min(520px, 100%);
+
+        margin: 0 auto;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .glance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-card {
+        width: min(650px, 100%);
+
+        margin: 0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .leadership-page .container {
+        width: min(100% - 28px, 1180px);
+    }
+
+
+    .leadership-hero {
+        min-height: 530px;
+    }
+
+
+    .leadership-hero-content {
+        padding: 75px 12px 65px;
+    }
+
+
+    .leadership-hero h1 {
+        font-size: clamp(42px, 13vw, 62px);
+    }
+
+
+    .leadership-hero p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .leadership-intro {
+        padding: 65px 0 35px;
+    }
+
+
+    .leadership-intro p {
+        font-size: 15px;
+    }
+
+
+    .team-glance-section {
+        padding: 35px 0 65px;
+    }
+
+
+    .glance-grid {
+        gap: 12px;
+    }
+
+
+    .glance-card {
+        padding: 23px 10px;
+
+        border-radius: 17px;
+    }
+
+
+    .glance-card strong {
+        font-size: 27px;
+    }
+
+
+    .glance-card span {
+        font-size: 10px;
+    }
+
+
+    .leadership-section {
+        padding: 70px 0;
+    }
+
+
+    .team-heading {
+        margin-bottom: 30px;
+    }
+
+
+    .team-heading h2 {
+        font-size: 31px;
+    }
+
+
+    .core-leaders-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .core-leaders-grid .leader-card:last-child {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+
+    .leader-card-primary .leader-photo {
+        height: 370px;
+    }
+
+
+    .leader-content {
+        padding: 23px;
+    }
+
+
+    .leader-content h3 {
+        font-size: 22px;
+    }
+
+
+    .team-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .team-photo {
+        height: 340px;
+    }
+
+
+    .team-card-content {
+        padding: 19px 21px 22px;
+    }
+
+
+    .social-section {
+        padding: 75px 0;
+    }
+
+
+    .social-card {
+        padding: 21px;
+
+        gap: 14px;
+    }
+
+
+    .social-icon {
+        flex-basis: 52px;
+
+        width: 52px;
+        height: 52px;
+
+        border-radius: 15px;
+    }
+
+
+    .closing-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 32px 25px;
+    }
+
+
+    .closing-chakra {
+        width: 62px;
+        height: 62px;
+
+        flex-basis: 62px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .glance-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .leader-card-primary .leader-photo {
+        height: 330px;
+    }
+
+
+    .team-photo {
+        height: 310px;
+    }
+
+
+    .social-card {
+        align-items: flex-start;
+    }
+
+
+    .social-card strong {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .leadership-page *,
+    .leadership-page *::before,
+    .leadership-page *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
+/* =========================================================
+   LEADERSHIP FINAL POLISH
+   COMPACT + GLOWING + ANIMATED LOGO
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   REMOVE UNNECESSARY INTRO INFORMATION
+   --------------------------------------------------------- */
+
+.leadership-intro {
+    display: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   COMPACT HERO
+   --------------------------------------------------------- */
+
+.leadership-hero {
+    min-height: 455px;
+}
+
+
+/* ---------------------------------------------------------
+   LARGE ANIMATED SHIVKUND LOGO
+   --------------------------------------------------------- */
+
+.leadership-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 530px;
+    height: 530px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-image: url("../images/logo.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.13;
+
+    border-radius: 48%;
+
+    filter:
+        drop-shadow(0 0 18px rgba(255, 122, 0, 0.35))
+        drop-shadow(0 0 28px rgba(19, 138, 69, 0.30));
+
+    animation:
+        logoFloat 7s ease-in-out infinite,
+        logoGlow 4s ease-in-out infinite alternate;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* glowing patriotic ring around logo */
+
+.leadership-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 570px;
+    height: 570px;
+
+    left: 30%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 48%;
+
+    border: 2px solid transparent;
+
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(
+            90deg,
+            #ff7a00,
+            #ffffff,
+            #138a45,
+            #ff7a00
+        ) border-box;
+
+    opacity: 0.55;
+
+    animation: logoRing 10s linear infinite;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+.leadership-hero-content {
+    z-index: 3;
+}
+
+
+/* ---------------------------------------------------------
+   REDUCE SECTION SPACING
+   --------------------------------------------------------- */
+
+.leadership-section {
+    padding: 58px 0;
+}
+
+
+.team-heading {
+    margin-bottom: 27px;
+}
+
+
+.team-heading h2 {
+    margin-top: 7px;
+    margin-bottom: 11px;
+}
+
+
+/* ---------------------------------------------------------
+   CORE LEADERSHIP — LARGE BUT COMPACT
+   --------------------------------------------------------- */
+
+.core-leaders-grid {
+    gap: 20px;
+}
+
+
+.leader-card-primary .leader-photo {
+    height: 300px;
+}
+
+
+.leader-content {
+    padding: 19px 22px 22px;
+}
+
+
+.leader-content h3 {
+    margin: 6px 0 7px;
+
+    font-size: 21px;
+}
+
+
+.leader-content p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   STANDARD TEAM CARDS — SHORTER
+   --------------------------------------------------------- */
+
+.team-grid {
+    gap: 18px;
+}
+
+
+.team-photo {
+    height: 245px;
+}
+
+
+.team-card-content {
+    padding: 16px 19px 18px;
+}
+
+
+.team-card-content h3 {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   GLOWING PHOTO BORDERS
+   --------------------------------------------------------- */
+
+.leader-card,
+.team-card {
+
+    position: relative;
+
+    border: 2px solid transparent;
+
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(
+            120deg,
+            #ff7a00,
+            #ffffff,
+            #138a45,
+            #ffffff,
+            #ff7a00
+        ) border-box;
+
+    background-size:
+        100% 100%,
+        300% 300%;
+
+    animation: cardBorderGlow 7s linear infinite;
+
+    box-shadow:
+        0 12px 35px rgba(16, 42, 67, 0.08);
+}
+
+
+.leader-card:hover,
+.team-card:hover {
+
+    animation-duration: 3s;
+
+    box-shadow:
+        0 18px 45px rgba(255, 122, 0, 0.16),
+        0 18px 45px rgba(19, 138, 69, 0.12);
+
+    transform: translateY(-7px);
+}
+
+
+/* ---------------------------------------------------------
+   PHOTO AREA — SUBTLE GLOW
+   --------------------------------------------------------- */
+
+.leader-photo,
+.team-photo {
+    position: relative;
+}
+
+
+.leader-photo::before,
+.team-photo::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+        0 0 12px rgba(255, 122, 0, 0.20),
+        inset 0 0 12px rgba(19, 138, 69, 0.10);
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   NUMBER BADGE
+   --------------------------------------------------------- */
+
+.leader-number {
+
+    width: 38px;
+    height: 38px;
+
+    top: 13px;
+    right: 13px;
+
+    font-size: 10px;
+
+}
+
+
+/* ---------------------------------------------------------
+   SOCIAL SECTION — COMPACT
+   --------------------------------------------------------- */
+
+.social-section {
+    padding: 65px 0;
+}
+
+
+/* ---------------------------------------------------------
+   CLOSING — COMPACT
+   --------------------------------------------------------- */
+
+.leadership-closing {
+    padding: 55px 0;
+}
+
+
+.closing-card {
+    padding: 30px 35px;
+}
+
+
+/* ---------------------------------------------------------
+   LOGO ANIMATIONS
+   --------------------------------------------------------- */
+
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        transform:
+            translate(-50%, -50%)
+            scale(1)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translate(-50%, -52%)
+            scale(1.045)
+            rotate(2deg);
+    }
+
+}
+
+
+@keyframes logoGlow {
+
+    0% {
+        opacity: 0.08;
+
+        filter:
+            drop-shadow(0 0 10px rgba(255, 122, 0, 0.20))
+            drop-shadow(0 0 15px rgba(19, 138, 69, 0.15));
+    }
+
+    100% {
+        opacity: 0.19;
+
+        filter:
+            drop-shadow(0 0 25px rgba(255, 122, 0, 0.55))
+            drop-shadow(0 0 35px rgba(19, 138, 69, 0.45));
+    }
+
+}
+
+
+@keyframes logoRing {
+
+    0% {
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+    }
+
+}
+
+
+@keyframes cardBorderGlow {
+
+    0% {
+        background-position:
+            0% 0%,
+            0% 50%;
+
+        box-shadow:
+            0 10px 30px rgba(16, 42, 67, 0.07),
+            0 0 0 rgba(255, 122, 0, 0);
+    }
+
+    25% {
+        background-position:
+            0% 0%,
+            50% 50%;
+
+        box-shadow:
+            0 10px 30px rgba(16, 42, 67, 0.08),
+            0 0 15px rgba(255, 122, 0, 0.18);
+    }
+
+    50% {
+        background-position:
+            0% 0%,
+            100% 50%;
+
+        box-shadow:
+            0 10px 30px rgba(16, 42, 67, 0.08),
+            0 0 17px rgba(255, 255, 255, 0.35);
+    }
+
+    75% {
+        background-position:
+            0% 0%,
+            50% 50%;
+
+        box-shadow:
+            0 10px 30px rgba(16, 42, 67, 0.08),
+            0 0 15px rgba(19, 138, 69, 0.20);
+    }
+
+    100% {
+        background-position:
+            0% 0%,
+            0% 50%;
+
+        box-shadow:
+            0 10px 30px rgba(16, 42, 67, 0.07),
+            0 0 0 rgba(19, 138, 69, 0);
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .leadership-hero {
+        min-height: 410px;
+    }
+
+    .leadership-hero::before {
+        width: 360px;
+        height: 360px;
+    }
+
+    .leadership-hero::after {
+        width: 395px;
+        height: 395px;
+    }
+
+    .leadership-section {
+        padding: 48px 0;
+    }
+
+    .leader-card-primary .leader-photo {
+        height: 300px;
+    }
+
+    .team-photo {
+        height: 275px;
+    }
+
+    .social-section {
+        padding: 55px 0;
+    }
+
+    .leadership-closing {
+        padding: 45px 0;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 420px) {
+
+    .leader-card-primary .leader-photo {
+        height: 275px;
+    }
+
+    .team-photo {
+        height: 250px;
+    }
+
+}
+/* =========================================
+   SLIGHTLY LARGER MEMBER PHOTO CARDS
+========================================= */
+
+/* Core Leadership photos */
+.leader-card-primary .leader-photo {
+    height: 330px;
+}
+
+/* All other team photos */
+.team-card .team-photo {
+    height: 275px;
+}
+
+/* Keep the complete person visible */
+.leader-photo img,
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 10px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .leader-card-primary .leader-photo {
+        height: 300px;
+    }
+
+    .team-card .team-photo {
+        height: 255px;
+    }
+}
+/* =========================================================
+   SHIVKUND LEADERSHIP — PHOTO + VIBRANT TRICOLOUR UPGRADE
+========================================================= */
+
+
+/* =========================================================
+   1. PHOTO — SLIGHTLY ZOOMED IN
+========================================================= */
+
+.leader-photo,
+.team-photo {
+    overflow: hidden;
+    position: relative;
+    border-radius: 22px;
+}
+
+.leader-photo img,
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    
+    /* Slight zoom */
+    object-fit: cover;
+    object-position: center;
+    
+    transform: scale(1.08);
+    
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+/* Slight extra zoom when hovering */
+.leader-card:hover .leader-photo img,
+.team-card:hover .team-photo img {
+    transform: scale(1.14);
+    filter: brightness(1.05) saturate(1.08);
+}
+
+
+/* =========================================================
+   2. THICK TRICOLOUR GLOWING BORDER
+========================================================= */
+
+.leader-card,
+.team-card {
+    position: relative;
+    border: 5px solid transparent;
+
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(
+            120deg,
+            #ff6a00,
+            #ff9d00,
+            #ffffff,
+            #ffffff,
+            #138a36,
+            #00a651,
+            #ffffff,
+            #ff6a00
+        ) border-box;
+
+    background-size:
+        100% 100%,
+        400% 400%;
+
+    animation: tricolourBorderMove 5s linear infinite;
+
+    box-shadow:
+        0 0 12px rgba(255, 106, 0, 0.35),
+        0 0 22px rgba(255, 255, 255, 0.30),
+        0 0 30px rgba(19, 138, 54, 0.30);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Moving border */
+
+@keyframes tricolourBorderMove {
+
+    0% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+
+    25% {
+        background-position:
+            0 0,
+            100% 50%;
+    }
+
+    50% {
+        background-position:
+            0 0,
+            100% 100%;
+    }
+
+    75% {
+        background-position:
+            0 0,
+            0% 100%;
+    }
+
+    100% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+}
+
+
+/* Stronger glow on hover */
+
+.leader-card:hover,
+.team-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 18px rgba(255, 106, 0, 0.65),
+        0 0 35px rgba(255, 255, 255, 0.55),
+        0 0 45px rgba(19, 138, 54, 0.60);
+}
+
+
+/* =========================================================
+   3. EXTRA GLOW AROUND PHOTO
+========================================================= */
+
+.leader-photo,
+.team-photo {
+    box-shadow:
+        inset 0 0 18px rgba(255, 106, 0, 0.20),
+        inset 0 0 25px rgba(19, 138, 54, 0.20),
+        0 0 15px rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================================
+   4. VIBRANT TRICOLOUR HERO BACKGROUND
+========================================================= */
+
+.leadership-hero {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            110deg,
+            #ff6500 0%,
+            #ff8c00 18%,
+            #ffffff 40%,
+            #ffffff 52%,
+            #16a34a 75%,
+            #087f35 100%
+        );
+
+    background-size: 300% 300%;
+
+    animation: vibrantTricolour 8s ease-in-out infinite;
+}
+
+
+/* Moving vibrant colours */
+
+@keyframes vibrantTricolour {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================================================
+   5. VIBRANT LIGHT WAVES OVER HERO
+========================================================= */
+
+.leadership-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: -40%;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 25%,
+            rgba(255,255,255,0.45) 40%,
+            transparent 55%
+        );
+
+    background-size: 200% 100%;
+
+    animation: heroLightSweep 6s linear infinite;
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+@keyframes heroLightSweep {
+
+    0% {
+        background-position: -120% 0;
+    }
+
+    100% {
+        background-position: 120% 0;
+    }
+}
+
+
+/* Keep hero content above animation */
+
+.leadership-hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   6. STRONGER HERO GLOW
+========================================================= */
+
+.leadership-hero .leadership-glow {
+    opacity: 0.85;
+    filter: blur(45px);
+}
+
+
+/* =========================================================
+   7. HERO HEADING — MORE PREMIUM
+========================================================= */
+
+.leadership-hero h1,
+.leadership-hero h2 {
+
+    font-weight: 900;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,0.18),
+        0 0 12px rgba(255,255,255,0.70);
+
+}
+
+
+/* =========================================================
+   8. MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .leader-card,
+    .team-card {
+        border-width: 4px;
+    }
+
+    .leader-photo img,
+    .team-photo img {
+        transform: scale(1.05);
+    }
+
+    .leader-card:hover .leader-photo img,
+    .team-card:hover .team-photo img {
+        transform: scale(1.09);
+    }
+
+    .leadership-hero {
+        background-size: 400% 400%;
+    }
+}
+/* =========================================================
+   EQUAL IMPORTANCE — ALL LEADERSHIP CARDS
+========================================================= */
+
+/* =========================================================
+   TALLER PHOTO AREA — ABOUT 75% OF CARD
+========================================================= */
+
+.leader-card,
+.team-card {
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Photo occupies most of the card */
+.leader-photo,
+.team-photo {
+    height: 400px;
+    min-height: 400px;
+    flex-shrink: 0;
+
+    overflow: hidden;
+    border-radius: 20px;
+
+    position: relative;
+}
+
+/* Chairman gets EXACTLY the same size */
+.leader-card-primary .leader-photo {
+    height: 400px;
+    min-height: 400px;
+}
+
+/* Photo */
+.leader-photo img,
+.team-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.06);
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+/* Hover */
+.leader-card:hover .leader-photo img,
+.team-card:hover .team-photo img {
+    transform: scale(1.11);
+    filter: brightness(1.05) saturate(1.08);
+}
+
+
+/* =========================================================
+   INFORMATION AREA
+========================================================= */
+
+.leader-card .leader-info,
+.team-card .team-info {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 15px 20px;
+}
+
+
+/* One-line description */
+.member-line {
+    margin: 10px auto 0;
+
+    max-width: 92%;
+
+    font-size: 14px;
+    line-height: 1.45;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-weight: 600;
+    color: #555;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .leader-card,
+    .team-card {
+        min-height: 520px;
+    }
+
+    .leader-photo,
+    .team-photo,
+    .leader-card-primary .leader-photo {
+        height: 350px;
+        min-height: 350px;
+    }
+
+    .member-line {
+        font-size: 13px;
+    }
+}
+
+/* SAME PHOTO SIZE FOR EVERYONE */
+.leader-photo,
+.team-photo {
+    height: 275px;
+    min-height: 275px;
+    flex-shrink: 0;
+
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* SAME IMAGE TREATMENT */
+.leader-photo img,
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.06);
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+/* SAME HOVER EFFECT */
+.leader-card:hover .leader-photo img,
+.team-card:hover .team-photo img {
+    transform: scale(1.11);
+    filter: brightness(1.05) saturate(1.08);
+}
+
+/* REMOVE SPECIAL CHAIRMAN SIZE */
+.leader-card-primary .leader-photo {
+    height: 275px;
+    min-height: 275px;
+}
+
+.leader-card-primary {
+    min-height: 500px;
+    transform: none;
+}
+
+
+/* =========================================================
+   EQUAL CARD CONTENT
+========================================================= */
+
+.leader-card .leader-info,
+.team-card .team-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================================
+   ONE-LINE MEMBER MESSAGE
+========================================================= */
+
+.member-line {
+    margin: 12px auto 0;
+
+    max-width: 90%;
+
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+
+    font-weight: 600;
+
+    color: #555;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .leader-card,
+    .team-card {
+        min-height: 470px;
+    }
+
+    .leader-photo,
+    .team-photo,
+    .leader-card-primary .leader-photo {
+        height: 255px;
+        min-height: 255px;
+    }
+
+    .member-line {
+        font-size: 13px;
+        min-height: 40px;
+    }
+}
+/* =========================================================
+   EQUAL CARD LAYOUT FOR EVERY MEMBER
+   Chairman = Master Layout
+========================================================= */
+
+/* Every leadership card gets the same overall structure */
+.leader-card,
+.team-card {
+    display: flex;
+    flex-direction: column;
+    height: 560px;
+    min-height: 560px;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* EXACT SAME PHOTO SIZE FOR EVERYONE */
+.leader-card .leader-photo,
+.team-card .team-photo,
+.leader-card-primary .leader-photo {
+    width: 100%;
+    height: 400px;
+    min-height: 400px;
+    flex-shrink: 0;
+
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px 20px 0 0;
+}
+
+/* EXACT SAME IMAGE SIZE */
+.leader-card .leader-photo img,
+.team-card .team-photo img,
+.leader-card-primary .leader-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.06);
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+/* SAME HOVER EFFECT FOR EVERYONE */
+.leader-card:hover .leader-photo img,
+.team-card:hover .team-photo img {
+    transform: scale(1.11);
+    filter: brightness(1.05) saturate(1.08);
+}
+
+
+/* =========================================================
+   SAME NAME + ROLE + DESCRIPTION AREA
+========================================================= */
+
+.leader-card .leader-info,
+.team-card .team-info {
+    height: 160px;
+    min-height: 160px;
+
+    padding: 14px 16px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+/* SAME NAME STYLE */
+.leader-card h3,
+.team-card h3 {
+    margin: 0 0 4px;
+
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+/* SAME ROLE STYLE */
+.leader-card .role,
+.team-card .role {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* SAME ONE-LINE DESCRIPTION */
+.member-line {
+    margin: 7px auto 0;
+
+    max-width: 92%;
+
+    min-height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13.5px;
+    line-height: 1.4;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   REMOVE SPECIAL CHAIRMAN SIZING
+========================================================= */
+
+.leader-card-primary {
+    height: 560px;
+    min-height: 560px;
+
+    transform: none;
+}
+
+.leader-card-primary .leader-photo {
+    height: 400px;
+    min-height: 400px;
+}
+
+
+/* =========================================================
+   MOBILE — SAME LAYOUT, JUST SMALLER
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .leader-card,
+    .team-card,
+    .leader-card-primary {
+        height: 520px;
+        min-height: 520px;
+    }
+
+    .leader-card .leader-photo,
+    .team-card .team-photo,
+    .leader-card-primary .leader-photo {
+        height: 360px;
+        min-height: 360px;
+    }
+
+    .leader-card .leader-info,
+    .team-card .team-info {
+        height: 160px;
+        min-height: 160px;
+
+        padding: 12px;
+    }
+
+    .leader-card h3,
+    .team-card h3 {
+        font-size: 19px;
+    }
+
+    .member-line {
+        font-size: 12.5px;
+    }
+}
+/* =========================================================
+   SHIVKUND LEADERSHIP HERO — LOGO IN CIRCLE
+========================================================= */
+
+.leadership-hero {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+
+    /* VIBRANT TRICOLOUR BACKGROUND */
+    background:
+        linear-gradient(
+            115deg,
+            #ff6500 0%,
+            #ff8a00 18%,
+            #ffffff 43%,
+            #ffffff 55%,
+            #19a34a 78%,
+            #087b35 100%
+        );
+
+    background-size: 300% 300%;
+
+    animation: leadershipTricolour 8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   MOVING TRICOLOUR BACKGROUND
+========================================================= */
+
+@keyframes leadershipTricolour {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================================================
+   EXISTING GLOW — TURN INTO LARGE VISUAL CIRCLE
+========================================================= */
+
+.leadership-glow {
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    opacity: 0.8;
+
+    filter: blur(5px);
+}
+
+
+/* Saffron glow */
+.glow-saffron {
+    right: 7%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 102, 0, 0.35) 0%,
+            rgba(255, 102, 0, 0.18) 45%,
+            transparent 72%
+        );
+}
+
+
+/* Green glow */
+.glow-green {
+    right: 2%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(19, 138, 54, 0.30) 0%,
+            rgba(19, 138, 54, 0.15) 45%,
+            transparent 72%
+        );
+
+    animation: greenGlowMove 5s ease-in-out infinite;
+}
+
+
+@keyframes greenGlowMove {
+
+    0%,
+    100% {
+        transform: translateY(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1.12);
+    }
+}
+
+
+/* =========================================================
+   LOGO POSITION
+========================================================= */
+
+.leadership-hero-logo {
+    position: absolute;
+
+    right: 10%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   LOGO CIRCLE
+========================================================= */
+
+.hero-logo-ring {
+
+    width: 330px;
+    height: 330px;
+
+    padding: 7px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(
+            45deg,
+            #ff6500,
+            #ff9d00,
+            #ffffff,
+            #ffffff,
+            #138a36,
+            #00a651,
+            #ffffff,
+            #ff6500
+        ) border-box;
+
+    border: 7px solid transparent;
+
+    background-size:
+        100% 100%,
+        400% 400%;
+
+    animation:
+        logoBorderMove 4s linear infinite,
+        logoFloat 4s ease-in-out infinite;
+
+    box-shadow:
+        0 0 18px rgba(255, 102, 0, 0.65),
+        0 0 35px rgba(255, 255, 255, 0.75),
+        0 0 55px rgba(19, 138, 54, 0.60);
+
+}
+
+
+/* =========================================================
+   LOGO IMAGE
+========================================================= */
+
+.hero-logo-ring img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,0.8);
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+.hero-logo-ring:hover img {
+
+    transform: scale(1.06);
+
+    filter:
+        brightness(1.08)
+        saturate(1.15);
+}
+
+
+/* =========================================================
+   LOGO BORDER ANIMATION
+========================================================= */
+
+@keyframes logoBorderMove {
+
+    0% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+
+    50% {
+        background-position:
+            0 0,
+            100% 50%;
+    }
+
+    100% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+}
+
+
+/* =========================================================
+   LOGO FLOATING
+========================================================= */
+
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.leadership-hero-content {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: 52%;
+
+    margin-left: 8%;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .leadership-hero {
+
+        min-height: 720px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .leadership-hero-content {
+
+        width: 90%;
+
+        margin: 0 auto;
+
+        order: 1;
+    }
+
+    .leadership-hero-logo {
+
+        position: relative;
+
+        right: auto;
+        top: auto;
+
+        transform: none;
+
+        order: 2;
+
+        margin-top: 35px;
+    }
+
+    .hero-logo-ring {
+
+        width: 240px;
+        height: 240px;
+
+        border-width: 5px;
+    }
+
+    .leadership-glow {
+
+        width: 320px;
+        height: 320px;
+
+        right: 50%;
+
+        transform: translate(50%, -50%);
+    }
+}/* =========================================================
+   HERO — LOGO INSIDE THE EXISTING BIG CIRCLE
+========================================================= */
+
+/* Big circle */
+.leadership-glow.glow-saffron {
+
+    position: absolute;
+
+    width: 440px;
+    height: 440px;
+
+    right: 8%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 5;
+
+    /* Thick animated tricolour border */
+    border: 9px solid transparent;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.96),
+            rgba(255,255,255,0.96)
+        ) padding-box,
+
+        linear-gradient(
+            45deg,
+            #ff5a00,
+            #ff8c00,
+            #ffffff,
+            #ffffff,
+            #138a36,
+            #00a651,
+            #ffffff,
+            #ff5a00
+        ) border-box;
+
+    background-size:
+        100% 100%,
+        400% 400%;
+
+    animation:
+        bigCircleBorder 4s linear infinite,
+        bigCircleFloat 5s ease-in-out infinite;
+
+    box-shadow:
+        0 0 20px rgba(255, 90, 0, 0.75),
+        0 0 45px rgba(255, 255, 255, 0.75),
+        0 0 75px rgba(19, 138, 54, 0.70);
+}
+
+
+/* =========================================================
+   LOGO — EXACT CENTRE OF BIG CIRCLE
+========================================================= */
+
+.hero-center-logo {
+
+    width: 82%;
+    height: 82%;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 50%;
+
+    z-index: 10;
+
+    filter:
+        drop-shadow(0 8px 15px rgba(0,0,0,0.18))
+        drop-shadow(0 0 12px rgba(255,255,255,0.75));
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+/* Logo hover */
+
+.leadership-glow.glow-saffron:hover .hero-center-logo {
+
+    transform: scale(1.06);
+
+    filter:
+        drop-shadow(0 8px 15px rgba(0,0,0,0.20))
+        drop-shadow(0 0 20px rgba(255,255,255,0.95));
+}
+
+
+/* =========================================================
+   SECOND GLOW — ONLY LIGHT, NO SECOND CIRCLE
+========================================================= */
+
+.leadership-glow.glow-green {
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: 5%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(19,138,54,0.20) 0%,
+            rgba(19,138,54,0.10) 45%,
+            transparent 72%
+        );
+
+    filter: blur(25px);
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation: greenAura 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   MOVING TRICOLOUR BORDER
+========================================================= */
+
+@keyframes bigCircleBorder {
+
+    0% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+
+    25% {
+        background-position:
+            0 0,
+            100% 50%;
+    }
+
+    50% {
+        background-position:
+            0 0,
+            100% 100%;
+    }
+
+    75% {
+        background-position:
+            0 0,
+            0% 100%;
+    }
+
+    100% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+}
+
+
+/* =========================================================
+   BIG CIRCLE FLOAT
+========================================================= */
+
+@keyframes bigCircleFloat {
+
+    0%,
+    100% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(calc(-50% - 10px));
+    }
+}
+
+
+/* =========================================================
+   GREEN AURA
+========================================================= */
+
+@keyframes greenAura {
+
+    0%,
+    100% {
+        opacity: 0.55;
+        transform: translateY(-50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: translateY(-50%) scale(1.08);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .leadership-glow.glow-saffron {
+
+        width: 300px;
+        height: 300px;
+
+        right: 50%;
+        top: auto;
+        bottom: 30px;
+
+        transform: translateX(50%);
+    }
+
+    .leadership-glow.glow-green {
+
+        width: 340px;
+        height: 340px;
+
+        right: 50%;
+        top: auto;
+        bottom: 10px;
+
+        transform: translateX(50%);
+    }
+
+    .hero-center-logo {
+        width: 72%;
+        height: 72%;
+    }
+}
+/* =========================================================
+   FINAL FIX — LOGO MUST BE VISIBLE INSIDE BIG CIRCLE
+========================================================= */
+
+/* Big outer circle */
+.leadership-hero .glow-saffron {
+    position: absolute !important;
+
+    width: 440px !important;
+    height: 440px !important;
+
+    right: 8% !important;
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: visible !important;
+
+    z-index: 20 !important;
+
+    /* Outer white base + animated tricolour border */
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(
+            45deg,
+            #ff5a00,
+            #ff8a00,
+            #ffffff,
+            #ffffff,
+            #138a36,
+            #00a651,
+            #ffffff,
+            #ff5a00
+        ) border-box !important;
+
+    background-size:
+        100% 100%,
+        400% 400% !important;
+
+    border: 9px solid transparent !important;
+
+    animation:
+        bigHeroBorder 4s linear infinite,
+        bigHeroFloat 5s ease-in-out infinite !important;
+
+    box-shadow:
+        0 0 20px rgba(255,90,0,.75),
+        0 0 45px rgba(255,255,255,.9),
+        0 0 75px rgba(19,138,54,.7) !important;
+}
+
+
+/* =========================================================
+   LOGO — FORCE IT ABOVE EVERYTHING
+========================================================= */
+
+.leadership-hero .hero-center-logo {
+    position: relative !important;
+
+    display: block !important;
+
+    width: 78% !important;
+    height: 78% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    z-index: 100 !important;
+
+    border-radius: 50% !important;
+
+    transform: none !important;
+
+    filter:
+        drop-shadow(0 5px 12px rgba(0,0,0,.20))
+        drop-shadow(0 0 15px rgba(255,255,255,.9)) !important;
+}
+
+
+/* =========================================================
+   MAKE SURE HERO CONTENT DOES NOT COVER LOGO
+========================================================= */
+
+.leadership-hero .leadership-hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+
+/* =========================================================
+   GREEN GLOW — LIGHT ONLY
+========================================================= */
+
+.leadership-hero .glow-green {
+    z-index: 2 !important;
+
+    pointer-events: none !important;
+}
+
+
+/* =========================================================
+   BORDER ANIMATION
+========================================================= */
+
+@keyframes bigHeroBorder {
+
+    0% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+
+    25% {
+        background-position:
+            0 0,
+            100% 50%;
+    }
+
+    50% {
+        background-position:
+            0 0,
+            100% 100%;
+    }
+
+    75% {
+        background-position:
+            0 0,
+            0% 100%;
+    }
+
+    100% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+}
+
+
+/* =========================================================
+   FLOATING ANIMATION
+========================================================= */
+
+@keyframes bigHeroFloat {
+
+    0%,
+    100% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(calc(-50% - 8px));
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .leadership-hero .glow-saffron {
+        width: 300px !important;
+        height: 300px !important;
+
+        right: 50% !important;
+        top: auto !important;
+        bottom: 25px !important;
+
+        transform: translateX(50%) !important;
+    }
+
+    .leadership-hero .hero-center-logo {
+        width: 78% !important;
+        height: 78% !important;
+    }
+}
