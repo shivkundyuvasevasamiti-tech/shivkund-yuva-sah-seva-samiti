@@ -3492,3 +3492,56 @@
         height: 78% !important;
     }
 }
+
+/* =========================================
+   MOBILE PERFORMANCE FIX
+   Shivkund Leadership Page
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Stop costly image effects during scrolling */
+    .leader-card:hover .leader-photo img,
+    .team-card:hover .team-photo img {
+        transform: none !important;
+        filter: none !important;
+    }
+
+    .leader-photo img,
+    .team-photo img {
+        transition: none !important;
+        transform: none !important;
+        filter: none !important;
+    }
+
+    /* Disable animated decorative glows */
+    .glow-orange,
+    .glow-green {
+        animation: none !important;
+        filter: none !important;
+    }
+
+    /* Reduce mobile graphics rendering work */
+    .leadership-label,
+    .leader-number {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    /* Prevent hover effects from triggering on touch */
+    .leader-card:hover,
+    .team-card:hover {
+        transform: none !important;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .leadership-page *,
+    .leadership-page *::before,
+    .leadership-page *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
