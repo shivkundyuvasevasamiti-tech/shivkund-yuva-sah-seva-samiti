@@ -10127,3 +10127,66 @@ css
         flex-basis: 105px !important;
     }
 }
+
+/* SHIVKUND HERO — MOBILE TEXT VISIBILITY FIX */
+@media screen and (max-width: 768px) {
+  .premium-home-hero .premium-hero-container {
+    gap: 12px !important;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+
+  .premium-home-hero .premium-hero-content {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .premium-home-hero .hero-established-badge {
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+    padding: 6px 10px !important;
+  }
+
+  .premium-home-hero .hero-committee-name {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1px !important;
+    overflow-wrap: anywhere;
+  }
+
+  .premium-home-hero h1 {
+    font-size: clamp(25px, 7vw, 32px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.5px !important;
+    margin: 10px 0 !important;
+    overflow-wrap: normal !important;
+  }
+
+  .premium-home-hero .premium-hero-description {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    max-width: 340px !important;
+    margin: 0 auto 14px !important;
+  }
+
+  .premium-home-hero .premium-hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 9px !important;
+    width: 100% !important;
+  }
+
+  .premium-home-hero .premium-hero-actions a {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    padding: 11px 14px !important;
+    text-align: center !important;
+  }
+
+  .premium-home-hero .premium-hero-values {
+    font-size: 11px !important;
+    line-height: 1.7 !important;
+    text-align: center !important;
+  }
+}
