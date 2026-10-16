@@ -9664,3 +9664,466 @@ css
         transform: none;
     }
 }
+
+/* =========================================
+   SHIVKUND — MOBILE HERO IMPROVEMENT
+   Keeps desktop styling unchanged
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Make the hero shorter and more compact */
+    .hero {
+        min-height: auto;
+        padding: 36px 0 30px;
+    }
+
+    /* Stack content and card neatly */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    /* Improve label readability */
+    .hero-label {
+        font-size: 12px;
+        line-height: 1.6;
+        letter-spacing: 1.2px;
+        margin-bottom: 12px;
+    }
+
+    /* Larger, clearer main heading */
+    .hero h1 {
+        max-width: 100%;
+        font-size: clamp(34px, 8vw, 44px);
+        line-height: 1.15;
+        letter-spacing: -0.7px;
+        overflow-wrap: break-word;
+    }
+
+    /* Darker and easier-to-read paragraph */
+    .hero-content > p {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 1.75;
+        color: #26364b;
+    }
+
+    /* Reduce excess button spacing */
+    .hero-buttons {
+        margin-top: 22px;
+        gap: 12px;
+    }
+
+    .btn {
+        min-height: 48px;
+        padding: 0 18px;
+        font-size: 14px;
+    }
+
+    /* Keep the blue committee card, but make it compact */
+    .hero-card {
+        border-radius: 20px;
+    }
+
+    .hero-card-top {
+        padding: 17px 18px;
+        font-size: 11px;
+        line-height: 1.6;
+        letter-spacing: 1px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .hero-card-main {
+        grid-template-columns: 70px minmax(0, 1fr);
+        gap: 15px;
+        padding: 27px 18px;
+        align-items: start;
+    }
+
+    .hero-number {
+        font-size: 58px;
+        line-height: 0.95;
+    }
+
+    .hero-card-main h3 {
+        font-size: 23px;
+        line-height: 1.3;
+        overflow-wrap: break-word;
+    }
+
+    .hero-card-main p {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 1.65;
+        color: #f0f3f8;
+    }
+
+    /* Enlarge the three bottom statistics */
+    .hero-card-bottom div {
+        padding: 16px 5px;
+    }
+
+    .hero-card-bottom strong {
+        font-size: 23px;
+    }
+
+    .hero-card-bottom span {
+        margin-top: 6px;
+        font-size: 10px;
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Reduce decorative animation workload on phones */
+    .hero-decoration {
+        animation: none;
+        pointer-events: none;
+    }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+
+    .hero {
+        padding-top: 26px;
+        padding-bottom: 24px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-card-main {
+        grid-template-columns: 56px minmax(0, 1fr);
+        gap: 12px;
+        padding: 23px 14px;
+    }
+
+    .hero-number {
+        font-size: 48px;
+    }
+
+    .hero-card-main h3 {
+        font-size: 21px;
+    }
+
+    .hero-card-bottom span {
+        font-size: 9px;
+    }
+}
+
+/* =========================================
+   FIX MOBILE HERO TEXT OVERFLOW
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero,
+    .hero-grid,
+    .hero-content,
+    .hero-card {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero {
+        overflow: hidden;
+    }
+
+    .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        gap: 24px;
+    }
+
+    /* Keep the committee name inside the screen */
+    .hero-content h1 {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(30px, 8vw, 40px);
+        line-height: 1.14;
+        letter-spacing: -0.5px;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    /* Prevent long words and paragraphs from overflowing */
+    .hero-content > p {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        line-height: 1.7;
+        overflow-wrap: break-word;
+    }
+
+    .hero-label {
+        max-width: 100%;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    /* Keep the blue card within the viewport */
+    .hero-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-content h1 {
+        font-size: 29px;
+        letter-spacing: -0.4px;
+    }
+}
+
+/* =========================================
+   SHIVKUND PREMIUM HERO — COMPACT LAYOUT
+========================================= */
+
+.premium-home-hero {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-top: 36px !important;
+    padding-bottom: 20px !important;
+    overflow: hidden;
+}
+
+.premium-hero-container {
+    min-height: 0 !important;
+    gap: 30px !important;
+    align-items: center;
+}
+
+.premium-hero-content {
+    min-width: 0;
+}
+
+.hero-established-badge {
+    margin-bottom: 12px !important;
+    font-size: 10px !important;
+}
+
+.hero-committee-name {
+    max-width: 100%;
+    font-size: clamp(20px, 2.1vw, 30px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.5px !important;
+    overflow-wrap: anywhere;
+}
+
+.premium-hero-content h1 {
+    margin-top: 12px !important;
+    font-size: clamp(34px, 4vw, 56px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -1px !important;
+}
+
+.premium-hero-description {
+    margin-top: 14px !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+}
+
+.premium-hero-actions {
+    margin-top: 20px !important;
+    gap: 10px !important;
+}
+
+.premium-hero-values {
+    margin-top: 22px !important;
+}
+
+.premium-hero-visual {
+    min-width: 0;
+}
+
+.hero-logo-orbit {
+    width: min(100%, 390px) !important;
+    aspect-ratio: 1 / 1;
+    margin-inline: auto;
+}
+
+.hero-logo-frame {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.hero-visual-caption {
+    margin-top: 12px !important;
+}
+
+.premium-hero-bottom {
+    margin-top: 16px !important;
+    padding-top: 10px !important;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .premium-home-hero {
+        padding: 16px 0 12px !important;
+    }
+
+    .premium-hero-container {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 16px !important;
+        width: 100%;
+        padding-inline: 18px;
+        box-sizing: border-box;
+    }
+
+    .hero-established-badge {
+        margin-bottom: 8px !important;
+        font-size: 9px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .hero-committee-name {
+        font-size: clamp(17px, 4.8vw, 22px) !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0 !important;
+    }
+
+    .premium-hero-content h1 {
+        margin-top: 8px !important;
+        font-size: clamp(27px, 7vw, 36px) !important;
+        line-height: 1.04 !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    .premium-hero-description {
+        margin-top: 10px !important;
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+    }
+
+    .premium-hero-actions {
+        margin-top: 14px !important;
+        gap: 8px !important;
+    }
+
+    .premium-hero-values {
+        margin-top: 14px !important;
+    }
+
+    .premium-hero-visual {
+        width: 100%;
+    }
+
+    .hero-logo-orbit {
+        width: min(54vw, 190px) !important;
+        margin-inline: auto;
+    }
+
+    .hero-visual-caption {
+        margin-top: 6px !important;
+        font-size: 10px !important;
+        text-align: center;
+    }
+
+    .premium-hero-bottom {
+        margin-top: 10px !important;
+        padding: 8px 12px 0 !important;
+        text-align: center;
+    }
+
+    .premium-hero-bottom p {
+        font-size: 10px !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    .premium-hero-container {
+        padding-inline: 14px;
+    }
+
+    .premium-hero-content h1 {
+        font-size: 26px !important;
+    }
+
+    .hero-logo-orbit {
+        width: 145px !important;
+    }
+}
+
+/* FIX: FORCE LOGO AREA TO BE COMPACT ON PHONES */
+
+@media (max-width: 768px) {
+
+    .premium-home-hero .premium-hero-visual {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+    }
+
+    .premium-home-hero .hero-logo-orbit {
+        position: relative !important;
+        width: 125px !important;
+        height: 125px !important;
+        min-width: 125px !important;
+        min-height: 125px !important;
+        max-width: 125px !important;
+        max-height: 125px !important;
+        aspect-ratio: 1 / 1 !important;
+        margin: 0 auto !important;
+        flex: 0 0 125px !important;
+    }
+
+    .premium-home-hero .hero-logo-frame {
+        position: absolute !important;
+        width: 76% !important;
+        height: 76% !important;
+        max-width: 76% !important;
+        max-height: 76% !important;
+        inset: 12% !important;
+        box-sizing: border-box !important;
+    }
+
+    .premium-home-hero .hero-logo-inner,
+    .premium-home-hero .hero-logo-inner img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    .premium-home-hero .hero-logo-glow,
+    .premium-home-hero .hero-orbit {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+
+    .premium-home-hero .hero-visual-caption {
+        margin: 4px 0 0 !important;
+        padding: 0 !important;
+        font-size: 9px !important;
+        line-height: 1.4 !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .premium-home-hero .hero-logo-orbit {
+        width: 105px !important;
+        height: 105px !important;
+        min-width: 105px !important;
+        min-height: 105px !important;
+        max-width: 105px !important;
+        max-height: 105px !important;
+        flex-basis: 105px !important;
+    }
+}
