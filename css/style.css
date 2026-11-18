@@ -10203,7 +10203,7 @@ css
 
   /* Hide the extra blue establishment strip on phones */
   .hero-established-badge,
-  .premium-home-hero .hero-established-badge {
+.premium-home-hero .hero-established-badge{
     /* Keep the badge in the hero; this is not the header strip. */
   }
 }
@@ -10401,3 +10401,122 @@ css
         text-align: center !important;
     }
 }
+/* =========================================
+   SHIVKUND — MOBILE HERO SIZE FIX
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    .premium-home-hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding-top: 45px !important;
+        padding-bottom: 45px !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .premium-home-hero .premium-hero-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+}
+
+/* ============================================
+   SHIVKUND — PREMIUM MOBILE HERO & TEXT FIX
+   Desktop design remains unchanged
+============================================ */
+
+@media screen and (max-width: 600px) {
+
+    /* Remove forced full-screen hero */
+    .premium-home-hero {
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 0 !important;
+        align-items: flex-start !important;
+    }
+
+    /* Fix desktop grid on mobile */
+    .premium-hero-container {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 24px !important;
+        padding: 28px 18px 32px !important;
+        margin: 0 auto !important;
+        align-items: start !important;
+        box-sizing: border-box !important;
+    }
+
+    .premium-hero-container > * {
+        min-width: 0 !important;
+    }
+
+    /* Hero content */
+    .premium-hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Main heading */
+    .premium-hero-content h1 {
+        font-size: clamp(30px, 8vw, 36px) !important;
+        line-height: 1.15 !important;
+        letter-spacing: -0.6px !important;
+        margin: 0 0 14px !important;
+    }
+
+    /* Small heading above main heading */
+    .premium-hero-eyebrow {
+        font-size: 12px !important;
+        letter-spacing: 1.5px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Established badge */
+    .hero-established-badge {
+        font-size: 10px !important;
+        letter-spacing: 1.5px !important;
+        gap: 8px !important;
+        margin-bottom: 14px !important;
+    }
+
+    /* Description */
+    .premium-hero-description {
+        max-width: 100% !important;
+        font-size: 16px !important;
+        line-height: 1.7 !important;
+        margin-top: 16px !important;
+    }
+
+    /* Hero buttons */
+    .premium-home-hero .premium-hero-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin: 22px auto 0 !important;
+    }
+
+    .premium-home-hero .hero-primary-button,
+    .premium-home-hero .hero-secondary-button {
+        width: 100% !important;
+        max-width: 300px !important;
+        min-height: 48px !important;
+        font-size: 16px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+}
+
