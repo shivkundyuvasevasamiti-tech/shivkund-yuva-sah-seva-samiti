@@ -1,16 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071426">
+    <title>Prince Roy | Host • Presenter • Website Developer</title>
 
-    <title>Prince Roy | Personal Profile</title>
-
-    <meta name="description"
-          content="Official personal profile of Prince Roy – Host, Presenter and Website Developer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --navy: #071426;
+            --navy-light: #0d2038;
+            --navy-card: #10243d;
+            --gold: #d6ad60;
+            --gold-light: #f0d69c;
+            --white: #f7f5ef;
+            --muted: #b3bdca;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -22,595 +33,611 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b1120;
-            color: #ffffff;
+            background: var(--navy);
+            color: var(--white);
+            font-family: 'DM Sans', sans-serif;
             line-height: 1.7;
         }
 
         a {
-            text-decoration: none;
             color: inherit;
+            text-decoration: none;
         }
 
-        .section {
-            padding: 75px 20px;
-        }
-
-        .section-inner {
-            width: 100%;
-            max-width: 1050px;
+        .container {
+            width: min(1100px, 90%);
             margin: auto;
         }
 
-        .section-label {
-            color: #d4af37;
+        /* NAVIGATION */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(7, 20, 38, 0.95);
+            border-bottom: 1px solid rgba(214, 173, 96, 0.2);
+            backdrop-filter: blur(12px);
+        }
+
+        nav {
+            min-height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--gold-light);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            color: var(--muted);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            background:
+                radial-gradient(circle at 80% 40%, rgba(214,173,96,0.10), transparent 30%),
+                linear-gradient(135deg, #071426, #0c2039);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 65px;
+        }
+
+        .eyebrow {
+            color: var(--gold);
             text-transform: uppercase;
             letter-spacing: 4px;
             font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .section-title {
-            font-size: 32px;
+            font-weight: 700;
             margin-bottom: 20px;
-            line-height: 1.3;
         }
 
-        /* PROFILE */
-
-        .profile-section {
-            text-align: center;
-            padding: 90px 20px 75px;
-            background: linear-gradient(145deg, #111c33, #080d19);
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(45px, 7vw, 76px);
+            line-height: 1.12;
+            margin-bottom: 20px;
         }
 
-        .profile-image {
-            width: 190px;
-            height: 190px;
+        h1 span {
+            color: var(--gold);
+        }
+
+        .hero-description {
+            max-width: 520px;
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .gold-button {
+            display: inline-block;
+            background: var(--gold);
+            color: #071426;
+            padding: 13px 27px;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .gold-button:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+        }
+
+        .outline-button {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            padding: 12px 25px;
+            margin-left: 10px;
+            border-radius: 3px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .outline-button:hover {
+            background: rgba(214,173,96,0.12);
+        }
+
+        .profile-frame {
+            width: min(340px, 100%);
+            margin: auto;
+            padding: 10px;
+            border: 1px solid var(--gold);
+            border-radius: 180px 180px 12px 12px;
+            background: rgba(214,173,96,0.05);
+            box-shadow: 0 20px 70px rgba(0,0,0,0.3);
+        }
+
+        .profile-frame img {
+            display: block;
+            width: 100%;
+            height: 430px;
             object-fit: cover;
-            object-position: center;
-            border-radius: 50%;
-            border: 4px solid #d4af37;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.4);
-            margin-bottom: 25px;
+            object-position: center top;
+            border-radius: 170px 170px 7px 7px;
         }
 
-        .profile-name {
-            font-size: 46px;
-            letter-spacing: 2px;
-            color: #ffffff;
+        /* COMMON SECTIONS */
+
+        section {
+            padding: 90px 0;
         }
 
-        .profile-role {
-            color: #d4af37;
-            font-size: 15px;
-            letter-spacing: 3px;
-            margin-top: 10px;
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
         }
 
-        .profile-description {
-            max-width: 600px;
-            margin: 20px auto 0;
-            color: #b9c2d3;
+        .section-heading .eyebrow {
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(30px, 4vw, 43px);
+            font-weight: 600;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            margin-top: 12px;
+        }
+
+        .gold-line {
+            width: 65px;
+            height: 2px;
+            background: var(--gold);
+            margin: 18px auto 0;
         }
 
         /* ABOUT */
 
-        .about-box {
-            background: #131e32;
-            padding: 40px;
-            border-radius: 18px;
-            border: 1px solid #26344b;
+        .about {
+            background: var(--navy-light);
         }
 
-        .about-box p {
-            color: #c5ccda;
-            margin-top: 15px;
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
         }
 
-        /* COMMITTEE CONNECTION */
-
-        .connection {
-            background: #101a2c;
+        .about-content p {
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 17px;
         }
 
-        .connection-box {
-            background: linear-gradient(135deg, #172641, #101827);
-            border: 1px solid #35445b;
-            border-radius: 18px;
-            padding: 45px;
-        }
-
-        .committee-name {
-            color: #e5c45c;
-            font-weight: bold;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 13px 25px;
-            border-radius: 7px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .button-primary {
-            background: #d4af37;
-            color: #101827;
-        }
-
-        .button-primary:hover {
-            background: #f0d477;
-            transform: translateY(-3px);
+        .about-content strong {
+            color: var(--gold-light);
         }
 
         /* IDENTITY */
 
-        .identity-box {
-            text-align: center;
-            padding: 45px 20px;
-            background: #131e32;
-            border: 1px solid #26344b;
-            border-radius: 18px;
+        .identity {
+            background: var(--navy);
         }
 
-        .identity-box h2 {
-            font-size: 32px;
+        .identity-card {
+            max-width: 700px;
+            margin: auto;
+            padding: 45px 25px;
+            text-align: center;
+            background: var(--navy-card);
+            border: 1px solid rgba(214,173,96,0.4);
+            border-radius: 8px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+        }
+
+        .identity-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 35px;
+            color: var(--gold-light);
             margin-bottom: 8px;
         }
 
-        .identity-box p {
-            color: #d4af37;
-            letter-spacing: 2px;
+        .identity-card p {
+            color: var(--muted);
+            letter-spacing: 1px;
+        }
+
+        /* COMMITTEE */
+
+        .committee {
+            background: var(--navy-light);
+        }
+
+        .committee-card {
+            max-width: 850px;
+            margin: auto;
+            padding: 40px;
+            background: var(--navy-card);
+            border: 1px solid rgba(214,173,96,0.35);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .committee-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 27px;
+            color: var(--gold-light);
+            margin-bottom: 15px;
+        }
+
+        .committee-card p {
+            color: var(--muted);
+            margin-bottom: 25px;
         }
 
         /* CONTACT */
 
-        .contact-section {
-            background: #101a2c;
+        .contact {
+            background:
+                radial-gradient(circle at center, rgba(214,173,96,0.08), transparent 55%),
+                var(--navy);
         }
 
-        .contact-box {
-            background: #131e32;
-            border: 1px solid #293950;
-            border-radius: 18px;
+        .contact-card {
+            max-width: 760px;
+            margin: auto;
             padding: 40px;
+            text-align: center;
+            background: var(--navy-card);
+            border: 1px solid rgba(214,173,96,0.4);
+            border-radius: 8px;
         }
 
-        .contact-heading {
-            font-size: 32px;
-            margin-bottom: 10px;
+        .contact-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 25px;
         }
 
-        .contact-intro {
-            color: #b9c2d3;
-            margin-bottom: 30px;
-        }
-
-        .roy-contact-link {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            padding: 20px;
-            margin-top: 15px;
-            background: #1a2941;
-            border: 1px solid #34445d;
-            border-radius: 12px;
-            transition: 0.3s;
-        }
-
-        .roy-contact-link:hover {
-            border-color: #d4af37;
-            transform: translateX(5px);
-        }
-
-        .roy-contact-icon {
-            width: 45px;
-            height: 45px;
-            background: #d4af37;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .roy-contact-icon svg {
-            width: 22px;
-            height: 22px;
-            fill: #101827;
-        }
-
-        .roy-contact-text {
-            display: flex;
-            flex-direction: column;
-            min-width: 0;
-        }
-
-        .roy-contact-text strong {
-            color: #ffffff;
-        }
-
-        .roy-contact-text small {
-            color: #b9c2d3;
+        .contact-item {
+            margin: 17px 0;
+            color: var(--muted);
             overflow-wrap: anywhere;
         }
 
-        .roy-contact-arrow {
-            margin-left: auto;
-            color: #d4af37;
-            font-size: 22px;
+        .contact-item span {
+            color: var(--gold);
+            font-weight: 700;
+            margin-right: 8px;
         }
 
-        .roy-contact-footer {
-            text-align: center;
-            margin-top: 35px;
-            color: #d4af37;
-            font-size: 12px;
+        .contact-item a:hover {
+            color: var(--gold-light);
+        }
+
+        .contact-tagline {
+            margin-top: 30px;
+            color: var(--gold);
             letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: 700;
         }
 
         /* FOOTER */
 
         footer {
-            background: #070b14;
-            padding: 40px 20px 20px;
-            border-top: 1px solid #26344b;
+            background: #040d19;
+            padding: 35px 0;
+            border-top: 1px solid rgba(214,173,96,0.25);
+            text-align: center;
         }
 
-        .footer-inner {
-            max-width: 1050px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 25px;
+        .footer-name {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold-light);
+            font-size: 26px;
+            margin-bottom: 5px;
         }
 
-        .footer-brand {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .footer-sub {
-            color: #d4af37;
-            font-size: 11px;
-            letter-spacing: 2px;
-            margin-top: 5px;
+        footer p {
+            color: var(--muted);
+            font-size: 13px;
         }
 
         .footer-links {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
-            gap: 22px;
+            gap: 25px;
+            margin: 20px 0;
         }
 
         .footer-links a {
-            color: #b9c2d3;
-            font-size: 14px;
+            font-size: 13px;
+            color: var(--muted);
         }
 
         .footer-links a:hover {
-            color: #d4af37;
+            color: var(--gold);
         }
 
         .copyright {
-            text-align: center;
-            border-top: 1px solid #26344b;
-            margin-top: 35px;
+            border-top: 1px solid rgba(255,255,255,0.08);
             padding-top: 20px;
-            color: #78869c;
-            font-size: 12px;
+            margin-top: 20px;
         }
 
         /* MOBILE */
 
-        @media (max-width: 600px) {
-
-            .section {
-                padding: 50px 16px;
-            }
-
-            .profile-section {
-                padding: 65px 16px;
-            }
-
-            .profile-image {
-                width: 155px;
-                height: 155px;
-            }
-
-            .profile-name {
-                font-size: 34px;
-            }
-
-            .profile-role {
-                font-size: 11px;
-                letter-spacing: 2px;
-            }
-
-            .section-title {
-                font-size: 26px;
-            }
-
-            .connection-box,
-            .contact-box,
-            .about-box {
-                padding: 25px 20px;
-            }
-
-            .footer-inner {
+        @media (max-width: 768px) {
+            nav {
                 flex-direction: column;
-                align-items: flex-start;
+                padding: 15px 0;
             }
 
-            .footer-links {
-                gap: 15px;
+            .nav-links {
+                gap: 17px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 60px 0;
+                text-align: center;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .profile-frame {
+                width: min(290px, 85%);
+            }
+
+            .profile-frame img {
+                height: 360px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .committee-card,
+            .contact-card {
+                padding: 30px 20px;
+            }
+
+            .outline-button {
+                margin: 12px 0 0;
             }
         }
 
+        @media (max-width: 380px) {
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <main>
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">PRINCE ROY</a>
 
-        <!-- PROFILE -->
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#identity">Identity</a></li>
+                    <li><a href="#committee">Committee</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <section class="profile-section" id="profile">
+    <!-- HERO / HOME -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
 
-            <img
-                src="image/prince-roy.jpg"
-                alt="Prince Roy"
-                class="profile-image"
-            >
+                <div>
+                    <div class="eyebrow">Welcome to my personal space</div>
 
-            <h1 class="profile-name">Prince Roy</h1>
+                    <h1>
+                        Prince <span>Roy</span>
+                    </h1>
 
-            <p class="profile-role">
-                HOST • PRESENTER • WEBSITE DEVELOPER
-            </p>
-
-            <p class="profile-description">
-                Welcome to my personal profile.
-                Explore my identity, interests and
-                connection with community development.
-            </p>
-
-        </section>
-
-
-        <!-- ABOUT -->
-
-        <section class="section" id="about">
-
-            <div class="section-inner">
-
-                <div class="about-box">
-
-                    <div class="section-label">
-                        About Me
-                    </div>
-
-                    <h2 class="section-title">
-                        A Journey of Learning and Growth
-                    </h2>
-
-                    <p>
-                        I am Prince Roy, a host, presenter and
-                        website developer with an interest in
-                        communication, technology and community
-                        development.
-                    </p>
-
-                    <p>
-                        I believe in continuous learning,
-                        creativity and contributing positively
-                        to society.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- COMMITTEE CONNECTION -->
-
-        <section class="section connection">
-
-            <div class="section-inner">
-
-                <div class="connection-box">
-
-                    <div class="section-label">
-                        Organisation
-                    </div>
-
-                    <h2 class="section-title">
-                        Connected with Shivkund Yuva Sah Seva Samiti
-                    </h2>
-
-                    <p>
-                        Prince Roy is associated with
-                        <span class="committee-name">
-                            Shivkund Yuva Sah Seva Samiti
-                        </span>,
-                        an organisation established in 2004
-                        that promotes education, sports,
-                        culture, quiz activities and youth
-                        development through community programmes.
-                    </p>
-
-                    <a
-                        href="index.html"
-                        class="button button-primary"
-                    >
-                        Explore the Committee
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- IDENTITY -->
-
-        <section class="section">
-
-            <div class="section-inner">
-
-                <div class="identity-box">
-
-                    <img
-                        src="image/prince-roy.jpg"
-                        alt="Prince Roy"
-                        class="profile-image"
-                        loading="lazy"
-                    >
-
-                    <h2>Prince Roy</h2>
-
-                    <p>
+                    <p class="hero-description">
                         Host • Presenter • Website Developer
                     </p>
 
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-
-        <section class="section contact-section">
-
-            <div class="section-inner">
-
-                <div class="contact-box">
-
-                    <div class="section-label">
-                        Get in Touch
-                    </div>
-
-                    <h2 class="contact-heading">
-                        Let's Connect
-                    </h2>
-
-                    <p class="contact-intro">
-                        Feel free to contact me.
-                        I would be happy to connect with you.
+                    <p class="hero-description">
+                        A space to connect, share ideas and explore creativity.
+                        Welcome to my personal website.
                     </p>
 
+                    <a href="#about" class="gold-button">Discover More</a>
+                    <a href="#contact" class="outline-button">Get in Touch</a>
+                </div>
 
-                    <a
-                        class="roy-contact-link"
-                        href="tel:+917808216386"
+                <div class="profile-frame">
+                    <img
+                        src="image/prince-roy.jpg"
+                        alt="Prince Roy"
+                        onerror="this.style.display='none'; this.parentElement.style.minHeight='250px';"
                     >
-
-                        <span class="roy-contact-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.56 3.58.56a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.19 2.46.56 3.58a1 1 0 01-.25 1.01z"/>
-                            </svg>
-                        </span>
-
-                        <span class="roy-contact-text">
-                            <strong>Call Me</strong>
-                            <small>+91 7808216386</small>
-                        </span>
-
-                        <span class="roy-contact-arrow">↗</span>
-
-                    </a>
-
-
-                    <a
-                        class="roy-contact-link"
-                        href="mailto:princeasp504@gmail.com"
-                    >
-
-                        <span class="roy-contact-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M3 5h18a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2zm0 2v.4l9 6 9-6V7H3zm18 10V9.8l-9 6-9-6V17z"/>
-                            </svg>
-                        </span>
-
-                        <span class="roy-contact-text">
-                            <strong>Email</strong>
-                            <small>princeasp504@gmail.com</small>
-                        </span>
-
-                        <span class="roy-contact-arrow">↗</span>
-
-                    </a>
-
-
-                    <div class="roy-contact-footer">
-                        CONNECT • INSPIRE • GROW
-                    </div>
-
                 </div>
 
             </div>
+        </div>
+    </section>
 
-        </section>
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container">
 
-    </main>
+            <div class="section-heading">
+                <div class="eyebrow">A little about me</div>
+                <h2>About Prince Roy</h2>
+                <div class="gold-line"></div>
+            </div>
 
+            <div class="about-content">
+                <p>
+                    Welcome to my personal website. I am <strong>Prince Roy</strong>,
+                    a host, presenter and website developer.
+                </p>
+
+                <p>
+                    I believe in creativity, communication, learning and
+                    connecting with people. This website represents my
+                    identity, interests and activities.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- IDENTITY -->
+    <section class="identity" id="identity">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="eyebrow">Who I am</div>
+                <h2>My Identity</h2>
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="identity-card">
+                <h3>Prince Roy</h3>
+                <p>Host • Presenter • Website Developer</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMMITTEE CONNECTION -->
+    <section class="committee" id="committee">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="eyebrow">Community & Connection</div>
+                <h2>Committee Connection</h2>
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="committee-card">
+                <h3>Shivkund Yuva Sah Seva Samiti</h3>
+
+                <p>
+                    Connected with Shivkund Yuva Sah Seva Samiti.
+                    Established in 2004, the organisation promotes
+                    education, sports, culture, quiz activities and
+                    youth development.
+                </p>
+
+                <a href="index.html" class="gold-button">
+                    Explore the Committee
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="eyebrow">Let's connect</div>
+                <h2>Get in Touch</h2>
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Contact Prince Roy</h3>
+
+                <div class="contact-item">
+                    <span>Phone:</span>
+                    <a href="tel:+917808216386">+91 7808216386</a>
+                </div>
+
+                <div class="contact-item">
+                    <span>Email:</span>
+                    <a href="mailto:princeasp504@gmail.com">
+                        princeasp504@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-tagline">
+                    CONNECT • INSPIRE • GROW
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- FOOTER -->
-
     <footer>
+        <div class="container">
 
-        <div class="footer-inner">
+            <div class="footer-name">PRINCE ROY</div>
 
-            <div>
-
-                <div class="footer-brand">
-                    PRINCE ROY
-                </div>
-
-                <div class="footer-sub">
-                    HOST • PRESENTER • WEBSITE DEVELOPER
-                </div>
-
-            </div>
-
+            <p>Host • Presenter • Website Developer</p>
 
             <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="#profile">Profile</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
 
-                <a href="index.html">
-                    Shivkund Yuva Sah Seva Samiti
-                </a>
-
-                <a href="#profile">
-                    Profile
-                </a>
-
-                <a href="#about">
-                    About
-                </a>
-
+            <div class="copyright">
+                <p>© 2026 Prince Roy. All Rights Reserved.</p>
             </div>
 
         </div>
-
-
-        <div class="copyright">
-            © 2026 Prince Roy. Personal profile.
-        </div>
-
     </footer>
 
 </body>
-</html>
+    </html>
+    
