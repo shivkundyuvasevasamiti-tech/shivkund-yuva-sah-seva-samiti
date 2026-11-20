@@ -10520,3 +10520,138 @@ css
     }
 }
 
+/* =====================================================
+   MOBILE HERO — SAME TWO-COLUMN DESIGN AS DESKTOP
+   ===================================================== */
+
+@media screen and (max-width: 600px) {
+
+    .premium-home-hero {
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .premium-hero-container {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(90px, 30%) !important;
+
+        align-items: center !important;
+        gap: 8px !important;
+
+        padding: 30px 12px 34px !important;
+        text-align: left !important;
+    }
+
+    .premium-hero-content {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .hero-established-badge {
+        font-size: 8px !important;
+        letter-spacing: 1px !important;
+        gap: 5px !important;
+        margin-bottom: 9px !important;
+    }
+
+    .badge-line {
+        width: 12px !important;
+    }
+
+    .premium-hero-eyebrow {
+        font-size: 8px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .premium-hero-content h1 {
+        font-size: clamp(19px, 5.2vw, 30px) !important;
+        line-height: 1.08 !important;
+        letter-spacing: -0.5px !important;
+        text-align: left !important;
+    }
+
+    .premium-hero-description {
+        font-size: 10px !important;
+        line-height: 1.45 !important;
+        margin: 9px 0 0 !important;
+    }
+
+    .premium-hero-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 7px !important;
+        margin-top: 12px !important;
+    }
+
+    .hero-primary-button,
+    .hero-secondary-button {
+        width: auto !important;
+        max-width: 100% !important;
+        min-height: 34px !important;
+        padding: 0 9px !important;
+        font-size: 9px !important;
+        border-radius: 8px !important;
+    }
+
+    .hero-primary-button {
+        gap: 6px !important;
+    }
+
+    .hero-primary-button strong {
+        font-size: 13px !important;
+    }
+
+    .premium-hero-values {
+        justify-content: flex-start !important;
+        gap: 6px 9px !important;
+        margin-top: 12px !important;
+    }
+
+    .hero-value {
+        gap: 3px !important;
+    }
+
+    .hero-value span,
+    .hero-value strong {
+        font-size: 7px !important;
+    }
+
+    .premium-hero-visual {
+        display: flex !important;
+        min-height: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .hero-logo-orbit {
+        width: 100% !important;
+        max-width: 125px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+
+    .hero-visual-caption {
+        margin-top: 5px !important;
+        text-align: center !important;
+    }
+
+    .hero-visual-caption strong {
+        font-size: 7px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .hero-visual-caption span {
+        font-size: 7px !important;
+    }
+
+    .premium-hero-bottom {
+        display: none !important;
+    }
+}
+
